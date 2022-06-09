@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    font-family: 'InaiMathi';
+    list-style: none;
+}
+
+#top {
+    background-color: #F6F8E8;
+    display: flex;
+}
+
+#top h1 {
+    color: #403E38;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 100px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    margin: auto 40px;
+
+}
+
+#top img {
+    right: 0;
+    margin-left: auto;
+}
+
+h2 {
+    font-size: 32px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+h2 span {
+    background: linear-gradient(transparent 50%, #FFFD94 0%);
+}
+
+#genzai h3 {
+    position: relative;
+    top: -10px;
+    font-size: 1.5rem;
+    z-index: 40;
+}
+
+
+
+#risou h3 {
+    font-size: 32px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 400;
+    position: relative;
+    top: -10px;
+    left: 48px;
+    font-size: 1.5rem;
+    z-index: 40;
+
+}
+
+
+.syokuzi {
+    display: flex;
+    justify-content: space-between;
+    margin: 20vh 22.5vw 0;
+}
+
+
+.shokuzi_photo {
+    display: flex;
+    justify-content: space-between;
+    margin: 8vh 15vw;
+}
+
+
+
+.maru {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #403E38;
+    padding: 20px;
+    background-color: #FFFD94;
+}
+
+.matome {
+    text-align: center;
+    letter-spacing: 0.13em;
+    color: #403E38;
+    line-height: 3rem;
+    margin: 10vh 0;
+    clear: both;
+
+}
+
+
+#risou {
+    background-color: #F6F8E8;
+    height: 1000px;
+}
+
+#risou img {
+    width: 400px;
+    margin-left: 10vw;
+    margin-top: -5vh;
+    float: left;
+}
+
+
+h3 span {
+    font-size: 12px;
+    height: 100px;
+    position: absolute;
+    color: #403E38;
+    margin: 15px;
+}
+
+.char1 {
+    transform: rotate(-63deg);
+}
+
+.char2 {
+    transform: rotate(-50deg);
+}
+
+.char3 {
+    transform: rotate(-37deg);
+}
+
+.char4 {
+    transform: rotate(-24deg);
+}
+
+.char5 {
+    transform: rotate(-11deg);
+}
+
+
+
+.number {
+    font-weight: 700;
+    font-size: 24px;
+    position: relative;
+    top: -28px;
+    left: 39px;
+    padding: 10px;
+    background-color: #F6F8E8;
+    z-index: 30;
+
+}
+
+.risou_mozi {
+    line-height: 1.3rem;
+    line-height: 1.3rem;
+    position: relative;
+    top: 25px;
+    left: 20px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 21px;
+    border: solid #403E38;
+    z-index: 20;
+    box-shadow: 10px 10px #ff9894;
+    text-align: center;
+    width: 254px;
+    height: 65px;
+}
+
+.risou_mozi_small {
+    line-height: 1.3rem;
+    position: relative;
+    top: 12px;
+    left: 20px;
+    display: inline-block;
+    width: 200px;
+    height: 45px;
+    font-size: 12px;
+    padding: 30px;
+    border: solid #403E38;
+    z-index: 20;
+    box-shadow: 10px 10px #FF9894;
+    text-align: center;
+}
+
+.point {
+    margin: 40px 20px;
+    display: block;
+    display: inline-block;
+   
+}
+
+
+
+#risou img {
+    float: left;
+}
+
+.content2 {
+    margin: 50px 0;
+}
+
+
+#plus {
+    background: repeating-linear-gradient(135deg, #F6F8E8, #F6F8E8 90px, #fff 90px, #fff 180px);
+
+}
+
+#plus img {
+    display: inline-block;
+    height: 23vh;
+    object-fit: cover;
+}
+
+.item{
+    width: 230px;
+    border-right: solid #65A650;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+
+.item:last-child{
+    border-right:none;
+}
+
+.itembox{
+    border-bottom: solid #65A650;
+    display: inline-block;
+    
+}
+
+
+
+.itembox:last-child{
+    border-bottom:none;
+}
+
+.content3{
+    text-align: center;
+    padding-bottom: 20vh;
+}
+
+
+#tanomu{
+    background-color: #F6F8E8;
+}
+
+
+
+.circle_1{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #ff9894;/*背景色*/
+    mix-blend-mode: multiply;
+    
+  }
+
+  .circle_2{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #ff9894;/*背景色*/
+    mix-blend-mode: multiply;
+    top:-40px;
+    position: relative;
+  }
+
+  .tanomu_pasuta{
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      position: relative;
+
+      top: -228px;
+      left: -24px
+  }
+  
+
+ .tanomu_oiru{
+     color: #fff;
+     font-size: 24px;
+     font-weight: 700;
+     position: relative;
+     top: -159px;
+     left: -22px;
+ }
+
+ .tanomu_kakeru{
+
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    top: -259px;
+    left: -26px;
+}
+ 
+.tanomu_syoukai{
+    font-size: 12px;
+    top: -90px;
+    position: relative;
+    left: -17px;
+    text-align: initial;
+
+}
+
+.tanomu_ex{
+    width: 190px;
+    display: inline-block;
+    padding: 15px;
+}
+ 
+.content4{
+    text-align: center;
+    margin-top:100px;
+}
+
+.ganbaru_photo{
+    border-radius: 8%;
+    box-shadow: 2px 2px 5px #5b5b5b;
+    float: left;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+.ganbaru_name{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.ganbaru_shyoukai{
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    width: 22vw;
+    padding: 0 10px;
+    margin-top: 45px;
+}
+
+.tenmini{
+    display: flex;
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+.sankaku {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 26px 0 65px 266px;
+    border-color: transparent transparent transparent #f6f8e8;
+    line-height: 0px;
+    position: relative;
+    top: -58px;
+    left: 611px;
+    transform: rotate(-11deg);
+}
+
+.ganbaru_text{
+    position: relative;
+}
+
+
+.ganbaru_hover {
+	overflow:		hidden;
+	position:		relative;
+    display: inline-block;
+    text-align: center;
+}
+.ganbaru_hover .caption {
+	font-size:		13px;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+	color:			#fff;
+    padding:  0 10px;
+    margin: -45px 0;
+    
+}
+.ganbaru_hover .mask {
+	width: 256px;
+	height: 186px;
+    border-radius: 8%;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 0.6s ease;
+	transition:		all 0.6s ease;
+}
+.ganbaru_hover:hover .mask {
+	opacity:		1;	/* マスクを表示する */
+	padding-top:		70px;	/* ホバーで下にずらす */
+}
+
+.ganbaru_hovers{
+    margin-left: 367px;
+    margin-top: 100px;
+}
+
+.ganbaru_name_under{
+    position: relative;
+    left: -50px;
+}
