@@ -2,6 +2,7 @@
     margin: 0;
     font-family: 'InaiMathi';
     list-style: none;
+    
 }
 
 html{
@@ -9,9 +10,19 @@ html{
 }
 
 #top {
+    background-image: url(images/top.png);
+    background-size:  100%;
+    width: 100vw;
+    height: 130vw;
+    background-repeat: no-repeat;
     background-color: #F6F8E8;
+    
+}
+
+.top_top{
     display: flex;
 }
+
 
 #top h1 {
     color: #403E38;
@@ -19,15 +30,52 @@ html{
     font-size: 80px;
     line-height: 100px;
     text-align: center;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     margin: auto 40px;
-
+    float: left;
+ 
 }
 
 #top img {
     right: 0;
     margin-left: auto;
+    width: 50vw;
+    height: 100vh;
+   display: block;
 }
+
+.fit{
+    position: relative;
+    top: 60vh;
+    left: 57vw;
+    color: #403E38;
+    font-size: 16px;
+    line-height: 50px;
+    letter-spacing: 0.7rem;
+    font-weight: 700;
+    display: inline-block;
+    text-align: center;
+}
+
+.sticky {
+    background-color: #F6F8E8;
+    width: 50vw;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    font-size: 44px;
+    font-weight: bold;
+    align-item: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+  }
+
 
 h2 {
     font-size: 32px;
