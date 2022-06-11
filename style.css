@@ -2,24 +2,137 @@
     margin: 0;
     font-family: 'InaiMathi';
     list-style: none;
-    
+
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 #top {
     background-image: url(images/top.png);
-    background-size:  100%;
+    background-size: 100%;
     width: 100vw;
     height: 130vw;
     background-repeat: no-repeat;
     background-color: #F6F8E8;
-    
+
 }
 
-.top_top{
+.saizen {
+    z-index: 1000;
+}
+
+#toggle {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+}
+
+#toggle-box {
+    position: relative;
+    width: 55px;
+    height: 25px;
+}
+
+#toggle-box>span {
+    width: 100%;
+    height: 1px;
+    left: 0;
+    display: block;
+    background: #ff9894;
+    position: absolute;
+    transition: transform .6s ease-in-out, top .5s ease, bottom .5s ease;
+}
+
+#toggle-box>span:nth-child(1) {
+    top: 0;
+}
+
+#toggle-box>span:nth-child(2) {
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+#toggle-box>span:nth-child(3) {
+    bottom: 0;
+}
+
+.is-open #toggle-box>span {
+    background: #fff;
+}
+
+.is-open #toggle-box>span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg) translatey(-50%);
+}
+
+.is-open #toggle-box>span:nth-child(2) {
+    width: 0;
+}
+
+.is-open #toggle-box>span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg) translatey(-50%);
+}
+
+/* z-index */
+#toggle {
+    z-index: 1000;
+}
+
+
+#nav-content {
+    z-index: 900;
+    overflow: auto;
+    width: 30%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #ff9894 30%, #FFFD94 100%);
+    color: #fff;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+}
+
+#nav-content ul {
+    list-style: none;
+}
+
+#nav-content a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 30px 0;
+    transition: opacity .6s ease;
+    pointer-events: none;
+}
+
+#nav-content a:hover {
+    opacity: 0.6;
+}
+
+.is-open {
+    overflow: hidden;
+}
+
+.is-open #nav-content {
+    z-index: 999;
+    visibility: visible;
+    opacity: 1;
+}
+
+.is-open #nav-content a {
+    pointer-events: auto;
+}
+
+
+
+
+.top_top {
     display: flex;
 }
 
@@ -33,7 +146,7 @@ html{
     letter-spacing: 0.1em;
     margin: auto 40px;
     float: left;
- 
+
 }
 
 #top img {
@@ -41,10 +154,10 @@ html{
     margin-left: auto;
     width: 50vw;
     height: 100vh;
-   display: block;
+    display: block;
 }
 
-.fit{
+.fit {
     position: relative;
     top: 60vh;
     left: 57vw;
@@ -55,6 +168,7 @@ html{
     font-weight: 700;
     display: inline-block;
     text-align: center;
+    z-index: 600;
 }
 
 .sticky {
@@ -73,8 +187,8 @@ html{
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    
-  }
+
+}
 
 
 h2 {
@@ -93,6 +207,69 @@ h2 span {
     top: -10px;
     font-size: 1.5rem;
     z-index: 40;
+}
+
+
+
+
+
+/* カード本体 */
+.card {
+    width: 23%;
+    /* 任意の横幅を指定 */
+    position: relative;
+}
+
+/* 擬似要素とpadding-topでカードの高さを指定 */
+.card::before {
+    content: "";
+    display: block;
+    padding-top: 142.5%;
+}
+
+/* カード内の画像 */
+.card img {
+    object-fit: 10% 30%;
+}
+
+/* カード裏面・表面の共通スタイル */
+.card .back,
+.card .front {
+    transition: all 0.6s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 110%;
+    width: 110%;
+    backface-visibility: hidden;
+}
+
+/* カード表面のスタイル */
+.card .front {
+    transform: rotateY(-180deg);
+}
+
+/* ホバー時のカード裏面 */
+.card:hover .back {
+    transform: rotateY(180deg);
+}
+
+.maru_mozi {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 50px;
+    line-height: 50px;
+
+}
+
+.maru_mozi span {
+    font-size: 40px;
+}
+
+/* ホバー時のカード表面 */
+.card:hover .front {
+    transform: rotateY(0);
 }
 
 
@@ -136,12 +313,13 @@ h2 span {
     background-color: #FFFD94;
 }
 
-.maru_banana{
+.maru_banana {
     object-position: 29% 50%;
 }
 
-.maru_ramen{
-    object-position: 29% 99%;;
+.maru_ramen {
+    object-position: 29% 99%;
+    ;
 }
 
 .matome {
@@ -302,6 +480,30 @@ h3 span {
 }
 
 
+#info{
+	display: none;
+}
+
+/*モーダルの横幅を変更したい場合*/
+.modaal-container{
+    max-width: 600px;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after, 
+.modaal-close:before{
+	background:#ccc;	
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before{
+	background:#666;
+}
+
+
+
 #tanomu {
     background-color: #F6F8E8;
 }
@@ -407,7 +609,7 @@ h3 span {
     margin-top: 45px;
 }
 
-.min{
+.min {
     color: #fff;
     background-color: #65A650;
     text-align: center;
@@ -426,7 +628,7 @@ h3 span {
     padding: 4px;
 }
 
-.min_under_left{
+.min_under_left {
     color: #fff;
     background-color: #65A650;
     text-align: center;
@@ -443,11 +645,11 @@ h3 span {
     position: relative;
     top: -329px;
     left: -758px;
-  
+
 }
 
 
-.min_under_right{
+.min_under_right {
     color: #fff;
     background-color: #65A650;
     text-align: center;
@@ -464,7 +666,7 @@ h3 span {
     position: relative;
     top: -329px;
     left: -483px;
-  
+
 }
 
 
@@ -565,18 +767,20 @@ h3 span {
     transform: rotate(-11deg);
 }
 
-#sime{
+#sime {
     padding-top: 100px;
 }
-.sime_blur{
+
+.sime_blur {
     background-image: url("images/sime.jpg");
     background-size: cover;
     position: relative;
     z-index: 0;
- 
 
-  }
-  .sime_blur::before {
+
+}
+
+.sime_blur::before {
     content: '';
     position: absolute;
     top: -5px;
@@ -587,9 +791,9 @@ h3 span {
     filter: blur(2px);
     /* position:absoluteのせいで最前面に来てしまうため */
     z-index: -1;
-  }
-  
-  .sime_title {
+}
+
+.sime_title {
     color: white;
     text-align: center;
     font-size: 32px;
@@ -597,9 +801,9 @@ h3 span {
     padding: 60px 0;
     font-weight: 700;
     letter-spacing: 1.3rem;
-  }
+}
 
-  .sime_bun{
+.sime_bun {
     font-weight: 500;
     font-size: 16px;
     line-height: 45px;
@@ -609,92 +813,95 @@ h3 span {
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 60px 0;
-  }
+}
 
-  #motto{
-      padding: 100px 200px 1px;
-      background-color: #F6F8E8;
-  }
-  .motto_mozi{
+#motto {
+    padding: 100px 200px 1px;
+    background-color: #F6F8E8;
+}
+
+.motto_mozi {
     font-size: 29px;
     line-height: 40px;
     text-align: center;
     letter-spacing: 0.3em;
     font-weight: 700;
     margin: 30px 0;
-  }
+}
 
-#motto a{
-      text-decoration: none;
-      color: #fff;
-      font-size: 16px;
-      width: 27%;
-      padding: 10px;
-      background-color: #65A650;
-      display: inline-block;
-      letter-spacing: 0.2rem;
-      margin: 10px;
-      border-radius: 15px;
-      margin: 100px 0;
+#motto a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    width: 27%;
+    padding: 10px;
+    background-color: #65A650;
+    display: inline-block;
+    letter-spacing: 0.2rem;
+    margin: 10px;
+    border-radius: 15px;
+    margin: 100px 0;
 
-  }
+}
 
-  .btn{
+.btn {
     /*アニメーションの起点とするためrelativeを指定*/
     position: relative;
-	overflow: hidden;
+    overflow: hidden;
     /*ボタンの形状*/
-	text-decoration: none;
-	display: inline-block;
+    text-decoration: none;
+    display: inline-block;
     padding: 10px 15px;
     text-align: center;
     outline: none;
-    /*アニメーションの指定*/   
+    /*アニメーションの指定*/
     transition: ease .2s;
 }
 
 /*ボタン内spanの形状*/
 .btn span {
-	position: relative;
-	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
-	color:#fff;
+    position: relative;
+    z-index: 3;
+    /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    color: #fff;
 }
 
-.btn:hover span{
-	color:#65A650;
+.btn:hover span {
+    color: #65A650;
 }
 
 /*== 背景が流れる（左から右） */
 .bgleft:before {
- 	content: '';
+    content: '';
     /*絶対配置で位置を指定*/
- 	position: absolute;
- 	top: 0;
- 	left: 0;
- 	z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
     /*色や形状*/
- 	background:#fff;/*背景色*/
- 	width: 100%;
-	height: 100%;
+    background: #fff;
+    /*背景色*/
+    width: 100%;
+    height: 100%;
     /*アニメーション*/
- 	transition: transform .5s cubic-bezier(0.8, 0, 0.2, 1) 0s;
- 	transform: scale(0, 1);
-	transform-origin: right top;
+    transition: transform .5s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: right top;
 }
 
 /*hoverした際の形状*/
-.bgleft:hover:before{
-	transform-origin:left top;
-	transform:scale(1, 1);
+.bgleft:hover:before {
+    transform-origin: left top;
+    transform: scale(1, 1);
 }
 
 
-footer{
+footer {
     background-color: #ff9894;
-    text-align: center; 
+    text-align: center;
 }
 
-footer p{
+footer p {
     color: #fff;
     font-size: 16px;
     letter-spacing: 0.8rem;
@@ -704,31 +911,46 @@ footer p{
 
 #topbutton {
     /* ▼ボタンの表示位置を画面の右下に固定 */
-    position: fixed; /* ←表示場所を固定 */
-    bottom: 68px;   /* ←下端からの距離 */
-    right: 18px;    /* ←右端からの距離 */
+    position: fixed;
+    /* ←表示場所を固定 */
+    bottom: 68px;
+    /* ←下端からの距離 */
+    right: 18px;
+    /* ←右端からの距離 */
     width: 40px;
     height: 40px;
- 
+
     /* ▼最初は非表示にしておく */
     display: none;
- 
+
     /* ▼配色・配置・文字の装飾など */
-    background-image: url(images/tophe.png);/* ←背景色 */
+    background-image: url(images/tophe.png);
+    /* ←背景色 */
     background-size: cover;
-    text-align: center;  /* ←文字の位置 */
-    font-size: 16px;     /* ←文字サイズ */
-    margin: 0px;          /* ←外側の余白 */
-    padding: 10px;       /* ←内側の余白 */
- }
- #topbutton a {
+    text-align: center;
+    /* ←文字の位置 */
+    font-size: 16px;
+    /* ←文字サイズ */
+    margin: 0px;
+    /* ←外側の余白 */
+    padding: 10px;
+    /* ←内側の余白 */
+    z-index: 800;
+}
+
+#topbutton a {
     /* ▼リンクの装飾 */
-    color: #65A650;          /* ←文字色 */
-    text-decoration: none; /* ←下線なし */
+    color: #65A650;
+    /* ←文字色 */
+    text-decoration: none;
+    /* ←下線なし */
     display: block;
     margin-top: 10px;
- }
- #topbutton a:hover {
-    /* ▼マウスが載ったときの装飾 */             /* ←文字色 */
-    text-decoration: underline; /* ←下線あり */
- }
+}
+
+#topbutton a:hover {
+    /* ▼マウスが載ったときの装飾 */
+    /* ←文字色 */
+    text-decoration: underline;
+    /* ←下線あり */
+}
