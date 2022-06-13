@@ -164,7 +164,7 @@ html {
 
 .fit {
     position: relative;
-    top: 72vh;
+    top: 26%;
     left: 57vw;
     color: #403E38;
     font-size: 16px;
@@ -999,15 +999,21 @@ footer p {
 }
 
 .modal-open {
-    margin-left: 500px;
+    margin:0 140px 0 100px;
+    width: 50px;
 }
 
 .modal_photo {
-    width: 17vw;
+    width: 12vw;
 }
 
 .modal_syoukai{
     padding-top: 80px;
+    background-color: #F6F8E8 !important;
+    height: 595px;
+    float: right;
+    width: 500px;
+    padding: 106px 60px;
 }
 
 .modal_title1 {
@@ -1015,6 +1021,11 @@ footer p {
     font-size: 36px;
     line-height: 34px;
     color: #403E38;
+}
+
+.modal_type{
+    width: 90%;
+    margin: 0 auto;
 }
 
 .modal_text{
@@ -1029,17 +1040,17 @@ footer p {
 }
 
 
-.modal_syoukai {
-    background-color: #F6F8E8 !important;
-    float: right;
-    width: 500px;
-    height: 550px;
-    padding: 106px 60px;
-   
-}
 
 .baner{
     width: 410px;
     margin-left: 30px;
 }
 
+a{
+    text-decoration: none;
+}
+
+
+.modaal-overlay{
+    z-index: 9000;
+}
