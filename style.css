@@ -97,6 +97,7 @@ html {
     left: 0;
     text-align: center;
     opacity: 0;
+    visibility: hidden;
     transition: opacity .6s ease, visibility .6s ease;
 }
 
@@ -449,6 +450,93 @@ h3 span {
 
 }
 
+.modal-open {
+    margin:0 70px;
+    width: 40px;
+}
+
+.modal_photo {
+    width: 180px;
+}
+
+.modal_syoukai{
+    padding-top: 80px;
+    background-color: #F6F8E8 !important;
+    height: 595px;
+    float: right;
+    width: 500px;
+    padding: 106px 60px;
+}
+
+.modal_title1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 34px;
+    color: #403E38;
+}
+
+.modal_type{
+    width: 90%;
+ 
+}
+
+.modal_text{
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 46px;
+}
+
+
+.modaal-content-container {
+    padding:initial !important;
+}
+
+
+
+.baner{
+    width: 410px;
+    margin-left: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.modaal-overlay{
+    z-index: 9000;
+}
+
+
+.main-content-container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .container {
+      width: calc(100% / 3);
+      box-sizing: border-box;
+      margin: 10px 0 ;
+      border-right: #65A650 solid;
+  }
+
+  .containers{
+      display: flex;
+      border-bottom: #65A650 solid;
+  }
+
+  .containers:last-child{
+      border-bottom: none;
+  }
+
+  .container:last-child{
+      border-right: none;
+  }
+  
 
 
 
@@ -998,59 +1086,3 @@ footer p {
     background: #65A650;
 }
 
-.modal-open {
-    margin:0 140px 0 100px;
-    width: 50px;
-}
-
-.modal_photo {
-    width: 12vw;
-}
-
-.modal_syoukai{
-    padding-top: 80px;
-    background-color: #F6F8E8 !important;
-    height: 595px;
-    float: right;
-    width: 500px;
-    padding: 106px 60px;
-}
-
-.modal_title1 {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 34px;
-    color: #403E38;
-}
-
-.modal_type{
-    width: 90%;
-    margin: 0 auto;
-}
-
-.modal_text{
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 46px;
-}
-
-
-.modaal-content-container {
-    padding:initial !important;
-}
-
-
-
-.baner{
-    width: 410px;
-    margin-left: 30px;
-}
-
-a{
-    text-decoration: none;
-}
-
-
-.modaal-overlay{
-    z-index: 9000;
-}
