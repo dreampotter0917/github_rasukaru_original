@@ -1,36 +1,36 @@
-$(function() {
-    // スクロールしたときに実行
-    $(window).scroll(function () {
-       // 目的のスクロール量を設定(px)
-       var TargetPos = 450;
-       // 現在のスクロール位置を取得
-       var ScrollPos = $(window).scrollTop();
-       // 現在位置が目的のスクロール量に達しているかどうかを判断
-       if( ScrollPos >= TargetPos) {
-          // 達していれば表示
-          $("#topbutton").fadeIn();
-       }
-       else {
-          // 達していなければ非表示
-          $("#topbutton").fadeOut();
-       }
-    });
- });
+$(function () {
 
-
- $(function() {
-   $('#toggle').on('click', function() {
-     $('body').toggleClass('is-open');
+$(function () {
+   // スクロールしたときに実行
+   $(window).scroll(function () {
+      // 目的のスクロール量を設定(px)
+      var TargetPos = 450;
+      // 現在のスクロール位置を取得
+      var ScrollPos = $(window).scrollTop();
+      // 現在位置が目的のスクロール量に達しているかどうかを判断
+      if (ScrollPos >= TargetPos) {
+         // 達していれば表示
+         $("#topbutton").fadeIn();
+      } else {
+         // 達していなければ非表示
+         $("#topbutton").fadeOut();
+      }
    });
 });
 
 
-$(function() {
-   $('nav a').on('click', function() {
-     $('body').removeClass('is-open');
+$(function () {
+   $('#toggle').on('click', function () {
+      $('body').toggleClass('is-open');
    });
 });
 
+
+$(function () {
+   $('nav a').on('click', function () {
+      $('body').removeClass('is-open');
+   });
+});
 
 
 //初回のみモーダルをすぐ出す判定。flagがモーダル表示のstart_open後に代入される
@@ -54,4 +54,8 @@ after_close:function(){// モーダルが閉じた後に行う動作
 }
 });
 
-  
+});
+
+
+
+

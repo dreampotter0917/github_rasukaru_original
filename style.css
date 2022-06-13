@@ -19,6 +19,8 @@ html {
 
 }
 
+
+
 .saizen {
     z-index: 1000;
 }
@@ -149,6 +151,9 @@ html {
 
 }
 
+
+
+
 #top img {
     right: 0;
     margin-left: auto;
@@ -159,7 +164,7 @@ html {
 
 .fit {
     position: relative;
-    top: 60vh;
+    top: 72vh;
     left: 57vw;
     color: #403E38;
     font-size: 16px;
@@ -444,13 +449,16 @@ h3 span {
 
 }
 
-#plus img {
+
+
+
+/* #plus img {
     display: inline-block;
     height: 23vh;
     object-fit: cover;
-}
+} */
 
-.item {
+/* .item {
     width: 230px;
     border-right: solid #65A650;
     padding: 20px;
@@ -477,36 +485,15 @@ h3 span {
 .content3 {
     text-align: center;
     padding-bottom: 20vh;
-}
-
-
-#info{
-	display: none;
-}
-
-/*モーダルの横幅を変更したい場合*/
-.modaal-container{
-    max-width: 600px;
-}
-
-/*モーダルのボタンの色を変更したい場合*/
-.modaal-close:after, 
-.modaal-close:before{
-	background:#ccc;	
-}
-
-.modaal-close:focus:after,
-.modaal-close:focus:before,
-.modaal-close:hover:after,
-.modaal-close:hover:before{
-	background:#666;
-}
+} */
 
 
 
 #tanomu {
     background-color: #F6F8E8;
 }
+
+
 
 
 
@@ -844,6 +831,8 @@ h3 span {
 
 }
 
+
+
 .btn {
     /*アニメーションの起点とするためrelativeを指定*/
     position: relative;
@@ -954,3 +943,103 @@ footer p {
     text-decoration: underline;
     /* ←下線あり */
 }
+
+
+
+/* ここからレスポンシブ */
+
+
+@media(min-width:481px) {
+    #sp_top {
+        display: none !important;
+    }
+}
+
+@media(max-width:480px) {
+    #top {
+        display: none;
+
+    }
+
+    #sp_top {
+        width: 100vw;
+        background-color: #F6F8E8;
+    }
+
+
+}
+
+@media(max-width:480px) {}
+
+
+/*infoエリアをはじめは非表示*/
+#info {
+    display: none;
+}
+
+/*モーダルの横幅を変更したい場合*/
+.modaal-container {
+    max-width: 600px;
+    max-height: 600px;
+    margin:  auto;
+    border: #65A650 solid 10px;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+    background: #65A650 !important;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+    background: #65A650;
+}
+
+.modal-open {
+    margin-left: 500px;
+}
+
+.modal_photo {
+    width: 17vw;
+}
+
+.modal_syoukai{
+    padding-top: 80px;
+}
+
+.modal_title1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 34px;
+    color: #403E38;
+}
+
+.modal_text{
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 46px;
+}
+
+
+.modaal-content-container {
+    padding:initial !important;
+}
+
+
+.modal_syoukai {
+    background-color: #F6F8E8 !important;
+    float: right;
+    width: 500px;
+    height: 550px;
+    padding: 106px 60px;
+   
+}
+
+.baner{
+    width: 410px;
+    margin-left: 30px;
+}
+
