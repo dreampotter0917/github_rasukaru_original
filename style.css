@@ -1182,12 +1182,25 @@ footer p {
     }
 
     /* ホバー時のカード裏面 */
-    .card:checked .back {
+    .card:hover .back {
         transform: rotateY(180deg);
     }
 
+    .maru_mozi {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        padding-top: 50px;
+        line-height: 50px;
+
+    }
+
+    .maru_mozi span {
+        font-size: 40px;
+    }
+
     /* ホバー時のカード表面 */
-    .card:checked .front {
+    .card:hover .front {
         transform: rotateY(0);
     }
 
