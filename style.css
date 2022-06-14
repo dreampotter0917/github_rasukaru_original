@@ -214,14 +214,27 @@ h2 span {
 }
 
 
+
 /* 現在の食生活 */
 
-#genzai h3 {
-    position: relative;
-    top: -10px;
-    font-size: 1.5rem;
-    z-index: 40;
+.time {
+    color: #403E38;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 60px 0;
 }
+
+.eat {
+
+    margin: 0 auto;
+}
+
+.genzai_content {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+}
+
 
 
 
@@ -230,19 +243,17 @@ h2 span {
     width: 23%;
     /* 任意の横幅を指定 */
     position: relative;
+    display: block;
 }
 
 /* 擬似要素とpadding-topでカードの高さを指定 */
 .card::before {
     content: "";
     display: block;
-    padding-top: 142.5%;
+    padding-top: 430px;
 }
 
-/* カード内の画像 */
-.card img {
-    object-fit: 10% 30%;
-}
+
 
 /* カード裏面・表面の共通スタイル */
 .card .back,
@@ -252,7 +263,7 @@ h2 span {
     left: 0;
     top: 0;
     height: 110%;
-    width: 110%;
+    width: 100%;
     backface-visibility: hidden;
 }
 
@@ -286,23 +297,6 @@ h2 span {
 
 
 
-
-
-.syokuzi {
-    display: flex;
-    justify-content: space-between;
-    margin: 20vh 22.5vw 0;
-}
-
-
-.shokuzi_photo {
-    display: flex;
-    justify-content: space-between;
-    margin: 8vh 15vw;
-}
-
-
-
 .maru {
     width: 200px;
     height: 200px;
@@ -311,6 +305,8 @@ h2 span {
     border: 1px solid #403E38;
     padding: 20px;
     background-color: #FFFD94;
+    position: relative;
+    left: -100px;
 }
 
 .maru_banana {
@@ -456,7 +452,7 @@ h3 span {
 /* ＋αで健康に */
 
 #pc_plus {
-   
+
     background: repeating-linear-gradient(135deg, #F6F8E8, #F6F8E8 90px, #fff 90px, #fff 180px);
 
 }
@@ -1047,15 +1043,19 @@ footer p {
 
     }
 
-    #sp_plus{
+    #sp_plus {
         display: none;
 
     }
-    
-    .sp_br{
+
+    .sp_br {
         display: none;
     }
-    
+
+    #motto1 {
+        display: none;
+    }
+
 
 }
 
@@ -1074,21 +1074,21 @@ footer p {
         scroll-behavior: smooth;
     }
 
-    
-
-    
-
 
     #top {
         display: none;
     }
 
-    #pc_plus{
+    #pc_plus {
         display: none;
     }
 
     #sp_top {
         width: 100vw;
+    }
+
+    #motto {
+        display: none;
     }
 
     .sp_top_h1 {
@@ -1141,124 +1141,34 @@ footer p {
     /* 現在の食生活 */
 
 
-    #genzai h3 {
-        position: relative;
-        top: -10px;
-        font-size: 1.5rem;
-        z-index: 40;
-    }
-
-
-
-    /* カード本体 */
-    .card {
-        width: 23%;
-        /* 任意の横幅を指定 */
-        position: relative;
-    }
-
-    /* 擬似要素とpadding-topでカードの高さを指定 */
-    .card::before {
-        content: "";
-        display: block;
-        padding-top: 142.5%;
-    }
-
-    /* カード内の画像 */
-    .card img {
-        object-fit: 10% 30%;
-    }
-
-    /* カード裏面・表面の共通スタイル */
-    .card .back,
-    .card .front {
-        transition: all 0.6s;
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 110%;
-        width: 110%;
-        backface-visibility: hidden;
-    }
-
-    /* カード表面のスタイル */
-    .card .front {
-        transform: rotateY(-180deg);
-    }
-
-    /* ホバー時のカード裏面 */
-    .card:hover .back {
-        transform: rotateY(180deg);
-    }
-
-    .maru_mozi {
-        font-size: 20px;
-        font-weight: 400;
+    .eat {
+        margin: 0 auto;
         text-align: center;
-        padding-top: 50px;
-        line-height: 50px;
-
     }
+
+    .genzai_content {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+    }
+
 
     .maru_mozi span {
         font-size: 40px;
     }
 
-    /* ホバー時のカード表面 */
-    .card:hover .front {
-        transform: rotateY(0);
+    .card {
+        position: relative;
+        margin: 0 auto;
     }
-
-
-    
-
-
-    .syokuzi {
-        display: flex;
-        justify-content: space-between;
-        margin: 20vh 22.5vw 0;
-    }
-
-
-    .shokuzi_photo {
-        display: flex;
-        justify-content: space-between;
-        margin: 8vh 15vw;
-    }
-
-
 
     .maru {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 1px solid #403E38;
-        padding: 20px;
-        background-color: #FFFD94;
-    }
-
-    .maru_banana {
-        object-position: 29% 50%;
-    }
-
-    .maru_ramen {
-        object-position: 29% 99%;
-        ;
-    }
-
-    .matome {
-        text-align: center;
-        letter-spacing: 0.13em;
-        color: #403E38;
-        line-height: 3rem;
-        margin: 10vh 0;
-        clear: both;
-
+        left: -82px;
     }
 
 
-   /* 理想の食生活 */
+    /* 理想の食生活 */
     #risou {
         background-color: #F6F8E8;
         height: 2000px;
@@ -1266,15 +1176,23 @@ footer p {
         font-size: 14px;
     }
 
- 
-
-
     #risou img {
         width: 200px;
         margin-left: 20%;
     }
 
- 
+    /* ホバー時のカード裏面 */
+    .card:checked .back {
+        transform: rotateY(180deg);
+    }
+
+    /* ホバー時のカード表面 */
+    .card:checked .front {
+        transform: rotateY(0);
+    }
+
+
+
 
     /* ＋αで健康に */
 
@@ -1283,11 +1201,11 @@ footer p {
 
     }
 
-    .content_sp_plus{
+    .content_sp_plus {
         padding-bottom: 200px;
     }
 
-    .button{
+    .button {
         color: #fff;
         background-color: #ff9894;
         display: block;
@@ -1298,13 +1216,13 @@ footer p {
         border-radius: 5px;
     }
 
-    .a_center{
+    .a_center {
         text-align: center;
     }
 
     .modal_photo {
         width: 180px;
-        
+
     }
 
     .main-content-container {
@@ -1320,7 +1238,7 @@ footer p {
         border-right: none;
     }
 
-  
+
 
     .containers:last-child {
         border-bottom: none;
@@ -1672,80 +1590,51 @@ footer p {
         transform: rotate(-11deg);
     }
 
-    #sime {
-        padding-top: 100px;
-    }
 
-    .sime_blur {
-        background-image: url("images/sime.jpg");
-        background-size: cover;
-        position: relative;
-        z-index: 0;
-
-
-    }
-
-    .sime_blur::before {
-        content: '';
-        position: absolute;
-        top: -5px;
-        bottom: -5px;
-        left: -5px;
-        right: -5px;
-        background: inherit;
-        filter: blur(2px);
-        /* position:absoluteのせいで最前面に来てしまうため */
-        z-index: -1;
-    }
 
     .sime_title {
-        color: white;
-        text-align: center;
-        font-size: 32px;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        line-height: 3rem;
+        font-size: 24px;
         padding: 60px 0;
         font-weight: 700;
-        letter-spacing: 1.3rem;
+        letter-spacing: 0.3rem;
     }
 
     .sime_bun {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 45px;
-        text-align: center;
-        text-align: center;
-        letter-spacing: 0.49em;
-        color: #FFFFFF;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-        padding: 60px 0;
+        font-size: 14px;
+        letter-spacing: 0.3em;
+        padding: 35px 0;
     }
 
-    #motto {
-        padding: 100px 200px 1px;
+    #motto1 {
+        text-align: center;
         background-color: #F6F8E8;
     }
 
-    .motto_mozi {
-        font-size: 26px;
+    .motto_mozi1 {
+        font-size: 18px;
         line-height: 40px;
-        text-align: center;
-        letter-spacing: 0.3em;
-        font-weight: 00;
-        margin: 30px 0;
+        letter-spacing: 0.2em;
+        font-weight: 400;
+        display: inline;
     }
 
-    #motto a {
+    #motto1 p {
+        font-size: 18px;
+        padding: 50px 0;
+        display: block;
+    }
+
+    #motto1 a {
         text-decoration: none;
         color: #fff;
-        font-size: 16px;
-        width: 27%;
-        padding: 10px;
+        font-size: 14px;
         background-color: #65A650;
-        display: inline-block;
-        letter-spacing: 0.2rem;
-        margin: 10px;
+        letter-spacing: 0.1rem;
         border-radius: 15px;
-        margin: 100px 0;
+        display: block;
+        width: 50%;
+        margin: 20px auto;
 
     }
 
