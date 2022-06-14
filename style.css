@@ -658,9 +658,7 @@ a {
 .ganbaru_photo {
     border-radius: 8%;
     box-shadow: 2px 2px 5px #5b5b5b;
-    float: left;
-    margin-right: 100px;
-    margin-bottom: 50px;
+    width: 300px;
 }
 
 .ganbaru_name {
@@ -670,98 +668,48 @@ a {
 }
 
 .ganbaru_shyoukai {
-    display: block;
-    font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     width: 22vw;
-    padding: 0 10px;
-    margin-top: 45px;
+    margin-top: 25px;
+    margin-left: 20px;
 }
-
-.min {
-    color: #fff;
-    background-color: #65A650;
-    text-align: center;
-    line-height: 70px;
-    border-radius: 50%;
-    display: inline-block;
-    width: 70px;
-    height: 70px;
-    font-weight: 700;
-    transform: rotate(-20deg);
-    letter-spacing: 0.1rem;
-    position: absolute;
-    top: -40px;
-    left: -393px;
-    font-size: 20px;
-    padding: 4px;
-}
-
-.min_under_left {
-    color: #fff;
-    background-color: #65A650;
-    text-align: center;
-    line-height: 70px;
-    border-radius: 50%;
-    display: inline-block;
-    width: 70px;
-    height: 70px;
-    font-weight: 700;
-    transform: rotate(-20deg);
-    letter-spacing: 0.1rem;
-    padding: 4px;
-    z-index: 0;
-    position: relative;
-    top: -329px;
-    left: -758px;
-
-}
-
-
-.min_under_right {
-    color: #fff;
-    background-color: #65A650;
-    text-align: center;
-    line-height: 70px;
-    border-radius: 50%;
-    display: inline-block;
-    width: 70px;
-    height: 70px;
-    font-weight: 700;
-    transform: rotate(-20deg);
-    letter-spacing: 0.1rem;
-    padding: 4px;
-    z-index: 0;
-    position: relative;
-    top: -329px;
-    left: -483px;
-
-}
-
 
 .tenmini {
     display: flex;
-    margin-top: 150px;
-    margin-left: 100px;
+    margin: 0 auto;
+    width: 60%;
 }
 
-.sankaku {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 26px 0 65px 266px;
-    border-color: transparent transparent transparent #f6f8e8;
-    line-height: 0px;
+.tenmini_photo {
     position: relative;
-    top: -58px;
-    left: 611px;
-    transform: rotate(-11deg);
+}
+
+.tenmini_time {
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 30%;
+    height: 28%;
 }
 
 .ganbaru_text {
+    width: 400px;
     position: relative;
+    z-index: 20;
+
+
 }
+
+.sankaku {
+    position: absolute;
+    top: -32px;
+    z-index: -1;
+
+}
+
+
+
 
 
 .ganbaru_hover {
@@ -808,35 +756,10 @@ a {
     margin-top: 100px;
 }
 
-.ganbaru_name_under_left {
-    position: relative;
-    left: -50px;
-    background-image: url(images/sankaku.png);
-    background-repeat: no-repeat;
-    background-position: 23% 99%;
-    background-size: 150px;
-}
 
-.ganbaru_name_under_right {
-    position: relative;
-    left: -50px;
-    background-image: url(images/sankaku.png);
-    background-repeat: no-repeat;
-    background-position: 56% 99%;
-    background-size: 150px;
-}
 
-.sankaku_under {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 26px 0 65px 266px;
-    border-color: transparent transparent transparent #f6f8e8;
-    line-height: 0px;
 
-    transform: rotate(-11deg);
-}
-
+/* しめ */
 #sime {
     padding-top: 100px;
 }
@@ -1092,7 +1015,6 @@ footer p {
     }
 
     .sp_top_h1 {
-        background-image: url(images/top.jpg);
         text-align: center;
         height: 100vh;
         background-size: cover;
@@ -1109,6 +1031,21 @@ footer p {
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     }
+
+    .is-open {
+        overflow: hidden;
+    }
+
+    .is-open #nav-content {
+        z-index: 999;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .is-open #nav-content a {
+        pointer-events: auto;
+    }
+
 
     .saizen {
         z-index: 1000;
