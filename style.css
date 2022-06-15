@@ -1395,34 +1395,30 @@ footer p {
 
 
     .ganbaru_content {
-        padding-left: 12px;
+        padding-left: 30px;
     }
 
     .ganbaru_photo {
         border-radius: 8%;
         box-shadow: 2px 2px 5px #5b5b5b;
-        width: 300px;
+        width: 200px;
     }
 
-    .ganbaru_foods {
-        position: relative;
-        width: 25%;
-        margin-bottom: 100px;
-        margin: 60px 50px;
-    }
 
     .ganbaru_name {
         font-weight: 700;
         font-size: 16px;
         line-height: 30px;
+        margin-left: -10px;
 
     }
 
     .ganbaru_shyoukai {
         font-size: 14px;
         line-height: 24px;
-        width: 75vw;
+        width: 66vw;
         margin: 10px 0;
+        margin-left: -10px;
 
     }
 
@@ -1462,17 +1458,17 @@ footer p {
 
 
     .sample1 .caption {
-        font-size: 14px;
-        padding: 50px 30px 0;
+        font-size: 10px;
+        padding: 30px 10px 0;
         color: #fff;
         letter-spacing: 0.1rem;
-        line-height: 25px;
+        line-height: 20px;
 
     }
 
     .sample1 .mask {
-        width: 318%;
-        height: 80.6%;
+        width: 200%;
+        height: 73.6%;
         border-radius: 22px;
         position: absolute;
         /* 絶対位置指定 */
@@ -1488,16 +1484,28 @@ footer p {
 
     .sample1 .mask1 {
 
-        height: 80.6%;
+        height: 73.6%;
 
     }
 
+
+  
+   
 
     .sample1:checked .mask {
         opacity: 1;
         /* マスクを表示する */
     }
 
+
+    .minites {
+
+        font-size: 16px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+      
+    }
 
 
     .sime_title {
