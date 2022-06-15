@@ -656,7 +656,7 @@ a {
     padding-bottom: 30px;
 }
 
-.ganbaru_content{
+.ganbaru_content {
     padding-left: 100px;
 }
 
@@ -677,7 +677,7 @@ a {
     font-weight: 700;
     font-size: 20px;
     line-height: 30px;
-    
+
 }
 
 .ganbaru_shyoukai {
@@ -731,7 +731,7 @@ a {
     transform: rotate(-10deg);
 }
 
-.karikarisalada{
+.karikarisalada {
     position: relative;
     width: 400px;
     margin: 60px 50px;
@@ -750,45 +750,51 @@ a {
     transform: rotate(-13deg);
 }
 
-.ganbaru_foods_under{
+.ganbaru_foods_under {
     display: flex;
     justify-content: center;
 }
 
-.ganbaru_foods_over{
+.ganbaru_foods_over {
     display: flex;
     justify-content: center;
     width: 100vw;
-    
+
 }
 
-.namae_under{
+.namae_under {
     margin-top: 40px;
 }
 
 
 .sample1 .caption {
-	font-size: 14px;
-	padding:50px 30px 0;
-	color:	#fff;
+    font-size: 14px;
+    padding: 50px 30px 0;
+    color: #fff;
     letter-spacing: 0.1rem;
     line-height: 25px;
 
 }
+
 .sample1 .mask {
-	width:			83.5%;
-	height:			80.6%;
+    width: 83.5%;
+    height: 80.6%;
     border-radius: 22px;
-	position:		absolute;	/* 絶対位置指定 */
-	top:			0;
-	left:			0;
-	opacity:		0;	/* マスクを表示しない */
-	background-color:	rgba(0,0,0,0.7);	/* マスクは半透明 */
-	-webkit-transition:	all 0.2s ease;
-	transition:		all 0.2s ease;
+    position: absolute;
+    /* 絶対位置指定 */
+    top: 0;
+    left: 0;
+    opacity: 0;
+    /* マスクを表示しない */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* マスクは半透明 */
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
+
 .sample1:hover .mask {
-	opacity:		1;	/* マスクを表示する */
+    opacity: 1;
+    /* マスクを表示する */
 }
 
 /* しめ */
@@ -1384,108 +1390,113 @@ footer p {
         margin-top: 100px;
     }
 
-/* 頑張れるに日には */
+    /* 頑張れるに日には */
 
 
 
-.ganbaru_content{
-    padding-left: 12px;
-}
+    .ganbaru_content {
+        padding-left: 12px;
+    }
 
-.ganbaru_photo {
-    border-radius: 8%;
-    box-shadow: 2px 2px 5px #5b5b5b;
-    width: 300px;
-}
+    .ganbaru_photo {
+        border-radius: 8%;
+        box-shadow: 2px 2px 5px #5b5b5b;
+        width: 300px;
+    }
 
-.ganbaru_foods {
-    position: relative;
-    width: 25%;
-    margin-bottom: 100px;
-    margin: 60px 50px;
-}
+    .ganbaru_foods {
+        position: relative;
+        width: 25%;
+        margin-bottom: 100px;
+        margin: 60px 50px;
+    }
 
-.ganbaru_name {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 30px;
-    
-}
+    .ganbaru_name {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 30px;
 
-.ganbaru_shyoukai {
-    font-size: 14px;
-    line-height: 24px;
-    width: 75vw;
-    margin: 10px 0;
-   
-}
+    }
 
-.ganbaru_text {
-    width: 400px;
-    position: relative;
-    z-index: 20;
-    margin-left: 50px;
-}
+    .ganbaru_shyoukai {
+        font-size: 14px;
+        line-height: 24px;
+        width: 75vw;
+        margin: 10px 0;
 
+    }
 
-
-.karikarisalada{
-    position: relative;
-    width: 400px;
-    margin: 60px 50px;
-}
+    .ganbaru_text {
+        width: 400px;
+        position: relative;
+        z-index: 20;
+        margin-left: 50px;
+    }
 
 
-.ganbaru_foods_under{
-    display: block;
-    justify-content: center;
-}
 
-.ganbaru_foods_over{
-    display: block;
-    justify-content: center;
-    width: 100vw;
-    
-}
-
-.namae_under{
-    margin-top: 40px;
-    width: 206px;
-    margin-bottom: 100px;
-}
+    .karikarisalada {
+        position: relative;
+        width: 400px;
+        margin: 60px 50px;
+    }
 
 
-.sample1 .caption {
-	font-size: 14px;
-	padding:50px 30px 0;
-	color:	#fff;
-    letter-spacing: 0.1rem;
-    line-height: 25px;
+    .ganbaru_foods_under {
+        display: block;
+        justify-content: center;
+    }
 
-}
-.sample1 .mask {
-	width:			318%;
-	height:			80.6%;
-    border-radius: 22px;
-	position:		absolute;	/* 絶対位置指定 */
-	top:			0;
-	left:			0;
-	opacity:		0;	/* マスクを表示しない */
-	background-color:	rgba(0,0,0,0.7);	/* マスクは半透明 */
-	-webkit-transition:	all 0.2s ease;
-	transition:		all 0.2s ease;
-}
+    .ganbaru_foods_over {
+        display: block;
+        justify-content: center;
+        width: 100vw;
 
-.sample1 .mask1 {
+    }
 
-	height:			69.6%;
-
-}
+    .namae_under {
+        margin-top: 40px;
+        width: 206px;
+        margin-bottom: 100px;
+    }
 
 
-.sample1:hover .mask {
-	opacity:		1;	/* マスクを表示する */
-}
+    .sample1 .caption {
+        font-size: 14px;
+        padding: 50px 30px 0;
+        color: #fff;
+        letter-spacing: 0.1rem;
+        line-height: 25px;
+
+    }
+
+    .sample1 .mask {
+        width: 318%;
+        height: 80.6%;
+        border-radius: 22px;
+        position: absolute;
+        /* 絶対位置指定 */
+        top: 0;
+        left: 0;
+        opacity: 0;
+        /* マスクを表示しない */
+        background-color: rgba(0, 0, 0, 0.7);
+        /* マスクは半透明 */
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+
+    .sample1 .mask1 {
+
+        height: 69.6%;
+
+    }
+
+
+    .sample1:checked .mask {
+        opacity: 1;
+        /* マスクを表示する */
+    }
 
 
 
