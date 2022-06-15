@@ -27,19 +27,19 @@ html {
 
 /* ハンバーガー  */
 
-#toggle {
+.toggle {
     position: fixed;
     top: 20px;
     left: 20px;
 }
 
-#toggle-box {
+.toggle-box {
     position: relative;
     width: 40px;
     height: 20px;
 }
 
-#toggle-box>span {
+.toggle-box>span {
     width: 100%;
     height: 1px;
     left: 0;
@@ -49,44 +49,44 @@ html {
     transition: transform .6s ease-in-out, top .5s ease, bottom .5s ease;
 }
 
-#toggle-box>span:nth-child(1) {
+.toggle-box>span:nth-child(1) {
     top: 0;
 }
 
-#toggle-box>span:nth-child(2) {
+.toggle-box>span:nth-child(2) {
     top: 50%;
     transform: translatey(-50%);
 }
 
-#toggle-box>span:nth-child(3) {
+.toggle-box>span:nth-child(3) {
     bottom: 0;
 }
 
-.is-open #toggle-box>span {
+.is-open .toggle-box>span {
     background: #fff;
 }
 
-.is-open #toggle-box>span:nth-child(1) {
+.is-open .toggle-box>span:nth-child(1) {
     top: 50%;
     transform: rotate(45deg) translatey(-50%);
 }
 
-.is-open #toggle-box>span:nth-child(2) {
+.is-open .toggle-box>span:nth-child(2) {
     width: 0;
 }
 
-.is-open #toggle-box>span:nth-child(3) {
+.is-open .toggle-box>span:nth-child(3) {
     top: 50%;
     transform: rotate(-45deg) translatey(-50%);
 }
 
 
 /* z-index */
-#toggle {
+.toggle {
     z-index: 1000;
 }
 
-#nav-content {
+.nav-content {
     z-index: 900;
     overflow: auto;
     width: 100%;
@@ -103,12 +103,12 @@ html {
     transition: opacity .6s ease, visibility .6s ease;
 }
 
-#nav-content ul {
+.nav-content ul {
     list-style: none;
     padding: 0;
 }
 
-#nav-content a {
+.nav-content a {
     display: block;
     color: #fff;
     text-decoration: none;
@@ -117,7 +117,7 @@ html {
     pointer-events: none;
 }
 
-#nav-content a:hover {
+.nav-content a:hover {
     opacity: 0.6;
 }
 
@@ -125,13 +125,13 @@ html {
     overflow: hidden;
 }
 
-.is-open #nav-content {
+.is-open .nav-content {
     z-index: 999;
     visibility: visible;
     opacity: 1;
 }
 
-.is-open #nav-content a {
+.is-open .nav-content a {
     pointer-events: auto;
 }
 
@@ -649,10 +649,15 @@ a {
 }
 
 
+
 /* 頑張れるに日には */
 
 #ganbaru {
     padding-bottom: 30px;
+}
+
+.ganbaru_content{
+    padding-left: 100px;
 }
 
 .ganbaru_photo {
@@ -661,10 +666,18 @@ a {
     width: 300px;
 }
 
+.ganbaru_foods {
+    position: relative;
+    width: 25%;
+    margin-bottom: 100px;
+    margin: 60px 50px;
+}
+
 .ganbaru_name {
     font-weight: 700;
     font-size: 20px;
     line-height: 30px;
+    
 }
 
 .ganbaru_shyoukai {
@@ -675,89 +688,108 @@ a {
     margin-left: 20px;
 }
 
-.tenmini {
-    display: flex;
-    margin: 0 auto;
-    width: 60%;
-}
-
-.tenmini_photo {
-    position: relative;
-}
-
-.tenmini_time {
-    position: absolute;
-    top: -25px;
-    left: -25px;
-    width: 30%;
-    height: 28%;
-}
-
 .ganbaru_text {
     width: 400px;
     position: relative;
     z-index: 20;
+    margin-left: 50px;
+}
 
+.minites {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    background-color: #65A650;
+    border-radius: 50%;
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 0;
+}
 
+.minites span {
+    font-size: 20px;
+}
+
+.ganbaru_katamuki {
+    transform: rotate(-25deg);
 }
 
 .sankaku {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 26px 0 26px 171px;
+    border-color: transparent transparent transparent #F6F8E8;
     position: absolute;
-    top: -32px;
+    bottom: 0;
     z-index: -1;
-
+    transform: rotate(-10deg);
 }
 
-
-
-
-
-.ganbaru_hover {
-    overflow: hidden;
+.karikarisalada{
     position: relative;
-    display: inline-block;
-    text-align: center;
+    width: 400px;
+    margin: 60px 50px;
 }
 
-.ganbaru_hover .caption {
-    font-size: 13px;
-    line-height: 1.5rem;
-    letter-spacing: 0.1rem;
-    color: #fff;
-    padding: 0 10px;
-    margin: -45px 0;
-
-}
-
-.ganbaru_hover .mask {
-    width: 256px;
-    height: 186px;
-    border-radius: 8%;
+.sankaku1 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 26px 0 26px 171px;
+    border-color: transparent transparent transparent #F6F8E8;
+    transform: translate(-50%, -50%);
+    top: -20px;
+    z-index: -1;
     position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    /* マスクを表示しない */
-    background-color: rgba(0, 0, 0, 0.4);
-    -webkit-transition: all 0.6s ease;
-    transition: all 0.6s ease;
-
+    transform: rotate(-13deg);
 }
 
-.ganbaru_hover:hover .mask {
-    opacity: 1;
-    /* マスクを表示する */
-    padding-top: 70px;
-    /* ホバーで下にずらす */
+.ganbaru_foods_under{
+    display: flex;
+    justify-content: center;
 }
 
-.ganbaru_hovers {
-    margin-left: 367px;
-    margin-top: 100px;
+.ganbaru_foods_over{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    
+}
+
+.namae_under{
+    margin-top: 40px;
 }
 
 
+.sample1 .caption {
+	font-size: 14px;
+	padding:50px 30px 0;
+	color:	#fff;
+    letter-spacing: 0.1rem;
+    line-height: 25px;
 
+}
+.sample1 .mask {
+	width:			83.5%;
+	height:			80.6%;
+    border-radius: 22px;
+	position:		absolute;	/* 絶対位置指定 */
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.7);	/* マスクは半透明 */
+	-webkit-transition:	all 0.2s ease;
+	transition:		all 0.2s ease;
+}
+.sample1:hover .mask {
+	opacity:		1;	/* マスクを表示する */
+}
 
 /* しめ */
 #sime {
@@ -1018,6 +1050,7 @@ footer p {
         text-align: center;
         height: 100vh;
         background-size: cover;
+        background-image: url(images/top.jpg);
     }
 
     .sp_top_h1 p {
@@ -1351,194 +1384,108 @@ footer p {
         margin-top: 100px;
     }
 
-
-    /* 頑張れるに日には */
-
-    #ganbaru {
-        padding-bottom: 30px;
-    }
-
-    .ganbaru_photo {
-        border-radius: 8%;
-        box-shadow: 2px 2px 5px #5b5b5b;
-        float: left;
-        margin-right: 100px;
-        margin-bottom: 50px;
-    }
-
-    .ganbaru_name {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 30px;
-    }
-
-    .ganbaru_shyoukai {
-        display: block;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 24px;
-        width: 22vw;
-        padding: 0 10px;
-        margin-top: 45px;
-    }
-
-    .min {
-        color: #fff;
-        background-color: #65A650;
-        text-align: center;
-        line-height: 70px;
-        border-radius: 50%;
-        display: inline-block;
-        width: 70px;
-        height: 70px;
-        font-weight: 700;
-        transform: rotate(-20deg);
-        letter-spacing: 0.1rem;
-        position: absolute;
-        top: -40px;
-        left: -393px;
-        font-size: 20px;
-        padding: 4px;
-    }
-
-    .min_under_left {
-        color: #fff;
-        background-color: #65A650;
-        text-align: center;
-        line-height: 70px;
-        border-radius: 50%;
-        display: inline-block;
-        width: 70px;
-        height: 70px;
-        font-weight: 700;
-        transform: rotate(-20deg);
-        letter-spacing: 0.1rem;
-        padding: 4px;
-        z-index: 0;
-        position: relative;
-        top: -329px;
-        left: -758px;
-
-    }
+/* 頑張れるに日には */
 
 
-    .min_under_right {
-        color: #fff;
-        background-color: #65A650;
-        text-align: center;
-        line-height: 70px;
-        border-radius: 50%;
-        display: inline-block;
-        width: 70px;
-        height: 70px;
-        font-weight: 700;
-        transform: rotate(-20deg);
-        letter-spacing: 0.1rem;
-        padding: 4px;
-        z-index: 0;
-        position: relative;
-        top: -329px;
-        left: -483px;
 
-    }
+.ganbaru_content{
+    padding-left: 12px;
+}
 
+.ganbaru_photo {
+    border-radius: 8%;
+    box-shadow: 2px 2px 5px #5b5b5b;
+    width: 300px;
+}
 
-    .tenmini {
-        display: flex;
-        margin-top: 150px;
-        margin-left: 100px;
-    }
+.ganbaru_foods {
+    position: relative;
+    width: 25%;
+    margin-bottom: 100px;
+    margin: 60px 50px;
+}
 
-    .sankaku {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 26px 0 65px 266px;
-        border-color: transparent transparent transparent #f6f8e8;
-        line-height: 0px;
-        position: relative;
-        top: -58px;
-        left: 611px;
-        transform: rotate(-11deg);
-    }
+.ganbaru_name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    
+}
 
-    .ganbaru_text {
-        position: relative;
-    }
+.ganbaru_shyoukai {
+    font-size: 14px;
+    line-height: 24px;
+    width: 75vw;
+    margin: 10px 0;
+   
+}
+
+.ganbaru_text {
+    width: 400px;
+    position: relative;
+    z-index: 20;
+    margin-left: 50px;
+}
 
 
-    .ganbaru_hover {
-        overflow: hidden;
-        position: relative;
-        display: inline-block;
-        text-align: center;
-    }
 
-    .ganbaru_hover .caption {
-        font-size: 13px;
-        line-height: 1.5rem;
-        letter-spacing: 0.1rem;
-        color: #fff;
-        padding: 0 10px;
-        margin: -45px 0;
+.karikarisalada{
+    position: relative;
+    width: 400px;
+    margin: 60px 50px;
+}
 
-    }
 
-    .ganbaru_hover .mask {
-        width: 256px;
-        height: 186px;
-        border-radius: 8%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        /* マスクを表示しない */
-        background-color: rgba(0, 0, 0, 0.4);
-        -webkit-transition: all 0.6s ease;
-        transition: all 0.6s ease;
+.ganbaru_foods_under{
+    display: block;
+    justify-content: center;
+}
 
-    }
+.ganbaru_foods_over{
+    display: block;
+    justify-content: center;
+    width: 100vw;
+    
+}
 
-    .ganbaru_hover:hover .mask {
-        opacity: 1;
-        /* マスクを表示する */
-        padding-top: 70px;
-        /* ホバーで下にずらす */
-    }
+.namae_under{
+    margin-top: 40px;
+    width: 206px;
+    margin-bottom: 100px;
+}
 
-    .ganbaru_hovers {
-        margin-left: 367px;
-        margin-top: 100px;
-    }
 
-    .ganbaru_name_under_left {
-        position: relative;
-        left: -50px;
-        background-image: url(images/sankaku.png);
-        background-repeat: no-repeat;
-        background-position: 23% 99%;
-        background-size: 150px;
-    }
+.sample1 .caption {
+	font-size: 14px;
+	padding:50px 30px 0;
+	color:	#fff;
+    letter-spacing: 0.1rem;
+    line-height: 25px;
 
-    .ganbaru_name_under_right {
-        position: relative;
-        left: -50px;
-        background-image: url(images/sankaku.png);
-        background-repeat: no-repeat;
-        background-position: 56% 99%;
-        background-size: 150px;
-    }
+}
+.sample1 .mask {
+	width:			318%;
+	height:			80.6%;
+    border-radius: 22px;
+	position:		absolute;	/* 絶対位置指定 */
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.7);	/* マスクは半透明 */
+	-webkit-transition:	all 0.2s ease;
+	transition:		all 0.2s ease;
+}
 
-    .sankaku_under {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 26px 0 65px 266px;
-        border-color: transparent transparent transparent #f6f8e8;
-        line-height: 0px;
+.sample1 .mask1 {
 
-        transform: rotate(-11deg);
-    }
+	height:			69.6%;
+
+}
+
+
+.sample1:hover .mask {
+	opacity:		1;	/* マスクを表示する */
+}
 
 
 
