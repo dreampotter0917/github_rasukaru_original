@@ -1170,7 +1170,7 @@ footer p {
     /* 理想の食生活 */
     #risou {
         background-color: #F6F8E8;
-        height: 1800px;
+        height: 1300px;
     }
 
 
@@ -1178,7 +1178,8 @@ footer p {
         width: 200px;
     
         display: block;
-        margin-right: -257px;
+        margin-right: -240px;
+        padding-left: 42px;
 
     }
 
@@ -1201,37 +1202,18 @@ footer p {
         margin: 15px;
     }
 
-    .char1 {
-        transform: rotate(-63deg);
-    }
-
-    .char2 {
-        transform: rotate(-50deg);
-    }
-
-    .char3 {
-        transform: rotate(-37deg);
-    }
-
-    .char4 {
-        transform: rotate(-24deg);
-    }
-
-    .char5 {
-        transform: rotate(-11deg);
-    }
 
 
     .risou_mozi {
         line-height: 1.3rem;
         display: inline-block;
         font-size: 10px;
-        padding: 21px;
-        border: solid #403E38;
+        padding: 10px 20px;
+        border: solid #403E38 1px;
         z-index: 20;
         box-shadow: 10px 10px #ff9894;
         text-align: center;
-        width: 254px;
+        width: 225px;
         height: 65px;
     }
 
@@ -1243,16 +1225,16 @@ footer p {
         display: inline-block;
         width: 200px;
         height: 45px;
-        font-size: 12px;
-        padding: 30px;
-        border: solid #403E38;
+        font-size: 10px;
+        padding: 17px 30px;
+        border: solid #403E38 1px;
         z-index: 20;
         box-shadow: 10px 10px #FF9894;
         text-align: center;
     }
 
     .point {
-        margin: 40px 20px;
+        margin: 40px 40px;
         display: block;
     }
 
@@ -1390,83 +1372,13 @@ footer p {
     }
 
 
-    /* 頼むならこれ */
-
-
-    #tanomu {
-        background-color: #F6F8E8;
-    }
-
-
-    .circle_1 {
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-        background: #ff9894;
-        /*背景色*/
-        mix-blend-mode: multiply;
-
-    }
-
-    .circle_2 {
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-        background: #ff9894;
-        /*背景色*/
-        mix-blend-mode: multiply;
-        top: -40px;
-        position: relative;
-    }
-
-    .tanomu_pasuta {
-        color: #fff;
-        font-size: 24px;
-        font-weight: 700;
-        position: relative;
-
-        top: -228px;
-        left: -24px
-    }
-
-
-    .tanomu_oiru {
-        color: #fff;
-        font-size: 24px;
-        font-weight: 700;
-        position: relative;
-        top: -159px;
-        left: -22px;
-    }
-
-    .tanomu_kakeru {
-
-        color: #fff;
-        font-size: 30px;
-        font-weight: 700;
-        position: relative;
-        top: -259px;
-        left: -26px;
-    }
-
-    .tanomu_syoukai {
-        font-size: 12px;
-        top: -90px;
-        position: relative;
-        left: -17px;
-        text-align: initial;
-
-    }
+   
 
     .tanomu_ex {
         width: 190px;
         display: inline-block;
         padding: 15px;
-    }
-
-    .content4 {
-        text-align: center;
-        margin-top: 100px;
+        padding-left: 50px;
     }
 
     /* 頑張れるに日には */
@@ -1546,7 +1458,7 @@ footer p {
     }
 
     .sample1 .mask {
-        width: 220%;
+        width: 221%;
         height: 73.6%;
         border-radius: 22px;
         position: absolute;
@@ -1563,7 +1475,7 @@ footer p {
 
     .sample1 .mask1 {
 
-        height: 73.6%;
+        height: 72.6%;
 
     }
 
