@@ -1486,7 +1486,11 @@ footer p {
         transition: all 0.2s ease;
     }
 
-  
+    .sample1 .mask1 {
+
+        height: 90%;
+
+    }
 
 
     .sample1:checked .mask {
