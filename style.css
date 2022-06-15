@@ -335,15 +335,14 @@ h2 span {
 }
 
 #risou h3 {
-    font-size: 32px;
     display: inline-block;
     text-align: center;
     font-weight: 400;
     position: relative;
-    top: -10px;
-    left: 48px;
     font-size: 1.5rem;
     z-index: 40;
+    top: -22px;
+    left: 10px;
 
 }
 
@@ -388,9 +387,7 @@ h3 span {
 .number {
     font-weight: 700;
     font-size: 24px;
-    position: relative;
-    top: -28px;
-    left: 39px;
+    position: absolute;
     padding: 10px;
     background-color: #F6F8E8;
     z-index: 30;
@@ -431,9 +428,9 @@ h3 span {
 }
 
 .point {
-    margin: 40px 20px;
-    display: block;
+    margin: 40px 60px;
     display: inline-block;
+    position: relative;
 
 }
 
@@ -1109,8 +1106,9 @@ footer p {
     }
 
 
-    h2 span {
-        background: linear-gradient(transparent 50%, #FFFD94 0%);
+    .matome{
+         font-size: 12px;
+         line-height: 25px;
     }
 
 
@@ -1144,18 +1142,7 @@ footer p {
     }
 
 
-    /* 理想の食生活 */
-    #risou {
-        background-color: #F6F8E8;
-        height: 2000px;
-        width: 100vw;
-        font-size: 14px;
-    }
 
-    #risou img {
-        width: 200px;
-        margin-left: 20%;
-    }
 
     /* ホバー時のカード裏面 */
     .card:hover .back {
@@ -1180,6 +1167,98 @@ footer p {
         transform: rotateY(0);
     }
 
+    /* 理想の食生活 */
+    #risou {
+        background-color: #F6F8E8;
+        height: 1800px;
+    }
+
+
+    #risou img {
+        width: 200px;
+    
+        display: block;
+        margin-right: -257px;
+
+    }
+
+    .risou_img{
+        display: block;
+        position: relative;
+
+    }
+
+    .points{
+        position: relative;
+        top: 215px;
+    }
+
+    h3 span {
+        font-size: 12px;
+        height: 100px;
+        position: absolute;
+        color: #403E38;
+        margin: 15px;
+    }
+
+    .char1 {
+        transform: rotate(-63deg);
+    }
+
+    .char2 {
+        transform: rotate(-50deg);
+    }
+
+    .char3 {
+        transform: rotate(-37deg);
+    }
+
+    .char4 {
+        transform: rotate(-24deg);
+    }
+
+    .char5 {
+        transform: rotate(-11deg);
+    }
+
+
+    .risou_mozi {
+        line-height: 1.3rem;
+        display: inline-block;
+        font-size: 10px;
+        padding: 21px;
+        border: solid #403E38;
+        z-index: 20;
+        box-shadow: 10px 10px #ff9894;
+        text-align: center;
+        width: 254px;
+        height: 65px;
+    }
+
+    .risou_mozi_small {
+        line-height: 1.3rem;
+        position: relative;
+        top: 12px;
+        left: 20px;
+        display: inline-block;
+        width: 200px;
+        height: 45px;
+        font-size: 12px;
+        padding: 30px;
+        border: solid #403E38;
+        z-index: 20;
+        box-shadow: 10px 10px #FF9894;
+        text-align: center;
+    }
+
+    .point {
+        margin: 40px 20px;
+        display: block;
+    }
+
+    .content2 {
+        margin: 50px 0;
+    }
 
 
 
@@ -1414,7 +1493,7 @@ footer p {
     }
 
     .ganbaru_shyoukai {
-        font-size: 14px;
+        font-size: 10px;
         line-height: 24px;
         width: 66vw;
         margin: 10px 0;
@@ -1467,7 +1546,7 @@ footer p {
     }
 
     .sample1 .mask {
-        width: 200%;
+        width: 220%;
         height: 73.6%;
         border-radius: 22px;
         position: absolute;
@@ -1489,8 +1568,8 @@ footer p {
     }
 
 
-  
-   
+
+
 
     .sample1:checked .mask {
         opacity: 1;
@@ -1504,7 +1583,7 @@ footer p {
         width: 60px;
         height: 60px;
         line-height: 60px;
-      
+
     }
 
 
@@ -1544,7 +1623,7 @@ footer p {
     #motto1 a {
         text-decoration: none;
         color: #fff;
-        font-size: 14px;
+        font-size: 12px;
         background-color: #65A650;
         letter-spacing: 0.1rem;
         border-radius: 15px;
@@ -1615,8 +1694,8 @@ footer p {
 
     footer p {
         color: #fff;
-        font-size: 16px;
-        letter-spacing: 0.8rem;
+        font-size: 8px;
+        letter-spacing: 0.3rem;
         padding: 20px 0;
     }
 
