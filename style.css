@@ -8,6 +8,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 #top {
@@ -504,12 +506,18 @@ h3 span {
 }
 
 .modal_syoukai {
-    padding-top: 80px;
     background-color: #F6F8E8 !important;
     height: 100%;
     float: right;
     width: 500px;
-    padding: 106px 60px;
+    height: 522px;
+}
+
+.modal_content {
+    margin: 0 auto;
+    width: 365px;
+    margin-top: 106px;
+
 }
 
 .modal_title1 {
@@ -517,13 +525,19 @@ h3 span {
     font-size: 36px;
     line-height: 34px;
     color: #403E38;
+    padding-bottom: 60px;
 }
 
 
 .modal_text {
     font-weight: 400;
-    font-size: 17px;
-    line-height: 46px;
+    line-height: 38px;
+    font-size: 14px;
+}
+
+.modal_text span {
+    font-weight: 700;
+    display: block;
 }
 
 
@@ -668,12 +682,14 @@ a {
     width: 25%;
     margin-bottom: 100px;
     margin: 60px 50px;
+    text-align: center;
 }
 
 .ganbaru_name {
     font-weight: 700;
     font-size: 20px;
     line-height: 30px;
+    color: #403E38;
 
 }
 
@@ -724,7 +740,7 @@ a {
     border-color: transparent transparent transparent #F6F8E8;
     position: absolute;
     bottom: 0;
-    z-index: -1;
+    z-index: -2;
     transform: rotate(-10deg);
 }
 
@@ -761,7 +777,9 @@ a {
 
 .namae_under {
     margin-top: 40px;
+    color: #403E38;
 }
+
 
 
 .sample1 .caption {
@@ -773,6 +791,11 @@ a {
 
 }
 
+.mask{
+    position: absolute;
+    left:30px;
+}
+
 .sample1 .mask {
     width: 83.5%;
     height: 80.6%;
@@ -780,7 +803,7 @@ a {
     position: absolute;
     /* 絶対位置指定 */
     top: 0;
-    left: 0;
+    left: 30px;
     opacity: 0;
     /* マスクを表示しない */
     background-color: rgba(0, 0, 0, 0.7);
@@ -792,6 +815,42 @@ a {
 .sample1:hover .mask {
     opacity: 1;
     /* マスクを表示する */
+}
+
+
+#ganbaru a {
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+    display: inline-block;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  }
+
+#ganbaru a:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    
+  }
+  
+
+#ganbaru a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 5px;
+    background-color: #ff9894;
+    transition: .5s;
+  }
+
+#ganbaru a:hover::after {
+    width: 100%;
+  }
+.sarch{
+    display: flex;
 }
 
 /* しめ */
@@ -868,7 +927,7 @@ a {
     letter-spacing: 0.2rem;
     margin: 10px;
     border-radius: 15px;
-    margin: 100px 0;
+    margin: 100px 17px;
 
 }
 
@@ -1030,6 +1089,7 @@ footer p {
 
     html {
         scroll-behavior: smooth;
+        overflow-x: initial;
     }
 
 
@@ -1106,9 +1166,9 @@ footer p {
     }
 
 
-    .matome{
-         font-size: 12px;
-         line-height: 25px;
+    .matome {
+        font-size: 12px;
+        line-height: 25px;
     }
 
 
@@ -1176,20 +1236,20 @@ footer p {
 
     #risou img {
         width: 200px;
-    
+
         display: block;
         margin-right: -240px;
         padding-left: 42px;
 
     }
 
-    .risou_img{
+    .risou_img {
         display: block;
         position: relative;
 
     }
 
-    .points{
+    .points {
         position: relative;
         top: 215px;
     }
@@ -1305,7 +1365,7 @@ footer p {
         margin: 0 41px;
     }
 
-   
+
     .modal_syoukai {
         height: 230px;
         width: 280px;
@@ -1315,7 +1375,7 @@ footer p {
     .modal_title1 {
         font-size: 14px;
         line-height: 34px;
- 
+
     }
 
 
@@ -1365,7 +1425,7 @@ footer p {
     }
 
 
-   
+
 
     .tanomu_ex {
         width: 190px;
@@ -1373,6 +1433,16 @@ footer p {
         padding: 15px;
         padding-left: 50px;
     }
+
+    .ura_modal {
+        position: relative;
+    }
+
+    /* .red_circle {
+        position: absolute;
+        top: -77px;
+        left: -78px;
+    } */
 
     /* 頑張れるに日には */
 
@@ -1451,8 +1521,8 @@ footer p {
     }
 
     .sample1 .mask {
-        width: 221%;
-        height: 73.6%;
+        width: 223%;
+        height: 53.6%;
         border-radius: 22px;
         position: absolute;
         /* 絶対位置指定 */
