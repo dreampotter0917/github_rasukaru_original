@@ -1301,40 +1301,33 @@ footer p {
 
 
     .baner {
-        width: 410px;
-        margin-left: 30px;
+        width: 200px;
+        margin: 0 41px;
     }
 
-    .ura_modal {
-        height: 600px;
-    }
-
+   
     .modal_syoukai {
-        padding-top: 80px;
-        background-color: #F6F8E8 !important;
-        height: 100%;
-        float: right;
-        width: 500px;
-        padding: 106px 60px;
+        height: 230px;
+        width: 280px;
+        padding: 35px 25px;
     }
 
     .modal_title1 {
-        font-weight: 700;
-        font-size: 36px;
+        font-size: 14px;
         line-height: 34px;
-        color: #403E38;
+ 
     }
 
 
     .modal_text {
-        font-weight: 400;
-        font-size: 17px;
-        line-height: 46px;
+        font-size: 10px;
+        line-height: 10px;
     }
 
 
     .modaal-content-container {
         padding: initial !important;
+        text-align: center;
     }
 
     a {
@@ -1351,8 +1344,8 @@ footer p {
 
     /*モーダルの横幅を変更したい場合*/
     .modaal-container {
-        width: 1000px;
-        height: 542px;
+        width: 300px;
+        height: 530px;
         margin: auto;
         border: #65A650 solid 10px;
     }
