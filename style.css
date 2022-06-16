@@ -538,6 +538,7 @@ h3 span {
 .modal_text span {
     font-weight: 700;
     display: block;
+    font-size: 18px;
 }
 
 
@@ -675,6 +676,7 @@ a {
     border-radius: 8%;
     box-shadow: 2px 2px 5px #5b5b5b;
     width: 300px;
+    height: 300px;
 }
 
 .ganbaru_foods {
@@ -1082,7 +1084,7 @@ footer p {
     * {
         padding: 0;
         margin: 0;
-        font-family: 'InaiMathi';
+        font-family: ;
         list-style: none;
 
     }
@@ -1367,21 +1369,29 @@ footer p {
 
 
     .modal_syoukai {
-        height: 230px;
+        height: 234px;
         width: 280px;
         padding: 35px 25px;
     }
 
     .modal_title1 {
-        font-size: 14px;
-        line-height: 34px;
-
+        font-size: 18px;
+        margin-bottom: -30px;
+    
     }
+
+    .modal_text span{
+        font-weight: 500;
+        display: block;
+        font-size: 14px;
+    }
+    
 
 
     .modal_text {
         font-size: 10px;
-        line-height: 10px;
+        line-height: 15px;
+        width: 230px;
     }
 
 
@@ -1437,6 +1447,13 @@ footer p {
     .ura_modal {
         position: relative;
     }
+
+    .modal_content{
+        margin: 0 auto;
+ 
+    text-align: initial;
+}
+    
 
     /* .red_circle {
         position: absolute;
