@@ -796,12 +796,13 @@ a {
     color: #fff;
     letter-spacing: 0.1rem;
     line-height: 25px;
+    text-align: initial;
 
 }
 
 .mask{
     position: absolute;
-    left:30px;
+    left:30px
 }
 
 .sample1 .mask {
@@ -818,10 +819,12 @@ a {
     /* マスクは半透明 */
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
+    text-align: initial;
 }
 
 .sample1:hover .mask {
     opacity: 1;
+
     /* マスクを表示する */
 }
 
@@ -1083,7 +1086,6 @@ footer p {
 
 
 }
-
 
 
 @media screen and (max-width: 800px) {
@@ -1478,6 +1480,7 @@ footer p {
         border-radius: 8%;
         box-shadow: 2px 2px 5px #5b5b5b;
         width: 200px;
+        height: 200px;
     }
 
 
@@ -1543,7 +1546,7 @@ footer p {
     }
 
     .sample1 .mask {
-        width: 223%;
+        width: 235%;
         height: 53.6%;
         border-radius: 22px;
         position: absolute;
@@ -1556,11 +1559,13 @@ footer p {
         /* マスクは半透明 */
         -webkit-transition: all 0.2s ease;
         transition: all 0.2s ease;
+        text-align: initial;
     }
 
     .sample1 .mask1 {
 
-        height: 72.6%;
+        height: 54.6%;
+        text-align: initial;
 
     }
 
