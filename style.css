@@ -1711,8 +1711,8 @@ footer p {
         /* ←下端からの距離 */
         right: 18px;
         /* ←右端からの距離 */
-        width: 25px;
-        height: 25px;
+        width: 40px;
+        height: 40px;
 
         /* ▼最初は非表示にしておく */
         display: none;
