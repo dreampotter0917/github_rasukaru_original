@@ -1546,7 +1546,7 @@ footer p {
     }
 
     .sample1 .mask {
-        width: 235%;
+        width: 233%;
         height: 53.6%;
         border-radius: 22px;
         position: absolute;
@@ -1739,6 +1739,7 @@ footer p {
         /* ←下線なし */
         display: block;
         margin-top: 10px;
+        font-size: 8px;
     }
 
     #topbutton a:hover {
