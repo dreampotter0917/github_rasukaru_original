@@ -1718,9 +1718,9 @@ footer p {
         display: none;
 
         /* ▼配色・配置・文字の装飾など */
-        background-image: url(images/tophe.png);
+        background-image: url(images/tophe1.png);
         /* ←背景色 */
-        background-size: cover;
+        background-size: 20px;
         text-align: center;
         /* ←文字の位置 */
         font-size: 16px;
