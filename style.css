@@ -1720,14 +1720,14 @@ footer p {
         /* ▼配色・配置・文字の装飾など */
         background-image: url(images/tophe.png);
         /* ←背景色 */
-        background-size: 20px;
+        background-size: cover;
         text-align: center;
         /* ←文字の位置 */
         font-size: 16px;
         /* ←文字サイズ */
         margin: 0px;
         /* ←外側の余白 */
-        padding: 5px;
+        padding: 10px;
         /* ←内側の余白 */
         z-index: 800;
     }
