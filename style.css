@@ -1102,6 +1102,9 @@ footer p {
         overflow-x: hidden;
     }
 
+    .body{
+        overflow: hidden;
+    }
 
     #top {
         display: none;
