@@ -1099,6 +1099,7 @@ footer p {
     html {
         scroll-behavior: smooth;
         overflow-x: initial;
+        overflow-x: hidden;
     }
 
 
