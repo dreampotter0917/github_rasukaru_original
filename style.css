@@ -1,1783 +1,1790 @@
-	
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
-
-
-* {
-    margin: 0;
-    list-style: none;
-
-}
-
-#wrapper{
-width:100%;
-overflow-x: hidden !important;
-}
-
-
-body {
-    font-family: 'Noto Sans JP', sans-serif;
-    }
-
-html {
-    scroll-behavior: smooth;
-    overflow: auto;
-    overflow-x: hidden;
-}
-
-#top {
-    background-image: url(images/top.png);
-    background-size: 100%;
-    width: 100vw;
-    height: 130vw;
-    background-repeat: no-repeat;
-    background-color: #F6F8E8;
-
-}
-
-.saizen {
-    z-index: 1000;
-}
-
-
-/* ハンバーガー  */
-
-.toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-}
-
-.toggle-box {
-    position: relative;
-    width: 40px;
-    height: 20px;
-}
-
-.toggle-box>span {
-    width: 100%;
-    height: 1px;
-    left: 0;
-    display: block;
-    background: #ff9894;
-    position: absolute;
-    transition: transform .6s ease-in-out, top .5s ease, bottom .5s ease;
-}
-
-.toggle-box>span:nth-child(1) {
-    top: 0;
-}
-
-.toggle-box>span:nth-child(2) {
-    top: 50%;
-    transform: translatey(-50%);
-}
-
-.toggle-box>span:nth-child(3) {
-    bottom: 0;
-}
-
-.is-open .toggle-box>span {
-    background: #fff;
-}
-
-.is-open .toggle-box>span:nth-child(1) {
-    top: 50%;
-    transform: rotate(45deg) translatey(-50%);
-}
-
-.is-open .toggle-box>span:nth-child(2) {
-    width: 0;
-}
-
-.is-open .toggle-box>span:nth-child(3) {
-    top: 50%;
-    transform: rotate(-45deg) translatey(-50%);
-}
-
-
-/* z-index */
-.toggle {
-    z-index: 1000;
-}
-
-.nav-content {
-    z-index: 900;
-    overflow: auto;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(45deg, #ff9894 30%, #FFFD94 100%);
-    color: #fff;
-    font-size: 16px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    text-align: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .6s ease, visibility .6s ease;
-}
-
-.nav-content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.nav-content a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    padding: 30px 0;
-    transition: opacity .6s ease;
-    pointer-events: none;
-}
-
-.nav-content a:hover {
-    opacity: 0.6;
-}
-
-.is-open {
-    overflow: hidden;
-}
-
-.is-open .nav-content {
-    z-index: 999;
-    visibility: visible;
-    opacity: 1;
-}
-
-.is-open .nav-content a {
-    pointer-events: auto;
-}
-
-
-
-
-.top_top {
-    display: flex;
-}
-
-
-#top h1 {
-    color: #403E38;
-    font-weight: 700;
-    font-size: 80px;
-    line-height: 100px;
-    text-align: center;
-    letter-spacing: 0.1em;
-    margin: auto 40px;
-    float: left;
-
-}
-
-
-
-
-#top img {
-    right: 0;
-    margin-left: auto;
-    width: 50vw;
-    height: 100vh;
-    display: block;
-}
-
-.fit {
-    position: relative;
-    top: 26%;
-    left: 57vw;
-    color: #403E38;
-    font-size: 16px;
-    line-height: 50px;
-    letter-spacing: 0.7rem;
-    font-weight: 700;
-    display: inline-block;
-    text-align: center;
-    z-index: 600;
-}
-
-.sticky {
-    background-color: #F6F8E8;
-    width: 50vw;
-    height: 100vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    left: 0;
-    color: #fff;
-    display: flex;
-    font-size: 44px;
-    font-weight: bold;
-    align-item: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-
-}
-
-
-h2 {
-    font-size: 32px;
-    padding-top: 80px;
-    padding-bottom: 40px;
-    text-align: center;
-    letter-spacing: 0.25rem;
-    color: #403E38;
-}
-
-h2 span {
-    background: linear-gradient(transparent 50%, #FFFD94 0%);
-}
-
-
-
-/* 現在の食生活 */
-
-.time {
-    color: #403E38;
-    font-size: 24px;
-    font-weight: 700;
-    padding: 60px 0;
-}
-
-.eat {
-
-    margin: 0 auto;
-}
-
-.genzai_content {
-    display: flex;
-    margin: 0 auto;
-    width: 80%;
-    margin-bottom: -60px;
-}
-
-
-
-
-/* カード本体 */
-.card {
-    width: 23%;
-    /* 任意の横幅を指定 */
-    position: relative;
-    display: block;
-}
-
-/* 擬似要素とpadding-topでカードの高さを指定 */
-.card::before {
-    content: "";
-    display: block;
-    padding-top: 430px;
-}
-
-
-
-/* カード裏面・表面の共通スタイル */
-.card .back,
-.card .front {
-    transition: all 0.6s;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 110%;
-    width: 100%;
-    backface-visibility: hidden;
-}
-
-/* カード表面のスタイル */
-.card .front {
-    transform: rotateY(-180deg);
-}
-
-/* ホバー時のカード裏面 */
-.card:hover .back {
-    transform: rotateY(180deg);
-}
-
-.maru_mozi {
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
-    padding-top: 50px;
-    line-height: 50px;
-
-}
-
-.maru_mozi span {
-    font-size: 40px;
-}
-
-/* ホバー時のカード表面 */
-.card:hover .front {
-    transform: rotateY(0);
-}
-
-
-
-.maru {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid #403E38;
-    padding: 20px;
-    background-color: #FFFD94;
-    position: relative;
-    left: -100px;
-}
-
-.maru_banana {
-    object-position: 29% 50%;
-}
-
-.maru_ramen {
-    object-position: 29% 99%;
-    ;
-}
-
-.matome {
-    text-align: center;
-    letter-spacing: 0.13em;
-    color: #403E38;
-    line-height: 3rem;
-    margin: 10vh 0;
-    clear: both;
-
-}
-
-/* 理想の食生活 */
-#risou {
-    background-color: #F6F8E8;
-    height: 1000px;
-}
-
-#risou h3 {
-    display: inline-block;
-    text-align: center;
-    font-weight: 400;
-    position: relative;
-    font-size: 1.5rem;
-    z-index: 40;
-    top: -22px;
-    left: 10px;
-
-}
-
-#risou img {
-    width: 400px;
-    margin-left: 10vw;
-    margin-top: -5vh;
-    float: left;
-}
-
-
-h3 span {
-    font-size: 12px;
-    height: 100px;
-    position: absolute;
-    color: #403E38;
-    margin: 15px;
-}
-
-.char1 {
-    transform: rotate(-63deg);
-}
-
-.char2 {
-    transform: rotate(-50deg);
-}
-
-.char3 {
-    transform: rotate(-37deg);
-}
-
-.char4 {
-    transform: rotate(-24deg);
-}
-
-.char5 {
-    transform: rotate(-11deg);
-}
-
-
-
-.number {
-    font-weight: 700;
-    font-size: 24px;
-    position: absolute;
-    padding: 10px;
-    background-color: #F6F8E8;
-    z-index: 30;
-
-}
-
-.risou_mozi {
-    line-height: 1.3rem;
-    line-height: 1.3rem;
-    position: relative;
-    top: 25px;
-    left: 20px;
-    display: inline-block;
-    font-size: 12px;
-    padding: 21px;
-    border: solid #403E38;
-    z-index: 20;
-    box-shadow: 10px 10px #ff9894;
-    text-align: center;
-    width: 254px;
-    height: 65px;
-}
-
-.risou_mozi_small {
-    line-height: 1.3rem;
-    position: relative;
-    top: 12px;
-    left: 20px;
-    display: inline-block;
-    width: 200px;
-    height: 45px;
-    font-size: 12px;
-    padding: 30px;
-    border: solid #403E38;
-    z-index: 20;
-    box-shadow: 10px 10px #FF9894;
-    text-align: center;
-}
-
-.point {
-    margin: 40px 60px;
-    display: inline-block;
-    position: relative;
-
-}
-
-
-
-#risou img {
-    float: left;
-}
-
-.content2 {
-    margin: 50px 0;
-}
-
-
-
-/* ＋αで健康に */
-
-
-
-#pc_plus {
-
-    background: repeating-linear-gradient(135deg, #F6F8E8, #F6F8E8 90px, #fff 90px, #fff 180px);
-
-}
-
-
-#pc_plus a {
-    display: inline-block;
-    transition: .3s;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    margin: -25px 172px 7px 53px;
-    width: 153px;
-  }
-  #pc_plus a:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-
-.modal-open {
-    margin: 0 70px;
-    width: 40px;
-}
-
-.modal_photo {
-    width: 180px;
-}
-
-.main-content-container {
-    max-width: 940px;
-    margin: 0 auto;
-    padding: 30px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-.container {
-    width: calc(100% / 3);
-    box-sizing: border-box;
-    margin: 10px 0;
-    border-right: #65A650 solid;
-    width: 275px;
-    text-align: ;
-}
-
-.containers {
-    display: flex;
-    border-bottom: #65A650 solid;
-}
-
-.containers:last-child {
-    border-bottom: none;
-}
-
-.container:last-child {
-    border-right: none;
-}
-
-
-
-.baner {
-    width: 410px;
-    margin-left: 30px;
-}
-
-.ura_modal {
-    height: 600px;
-}
-
-.modal_syoukai {
-    background-color: #F6F8E8 !important;
-    height: 100%;
-    float: right;
-    width: 500px;
-    height: 522px;
-}
-
-.modal_content {
-    margin: 0 auto;
-    width: 365px;
-    margin-top: 106px;
-
-}
-
-.modal_title1 {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 34px;
-    color: #403E38;
-    padding-bottom: 60px;
-}
-
-
-.modal_text {
-    font-weight: 400;
-    line-height: 38px;
-    font-size: 14px;
-}
-
-.modal_text span {
-    font-weight: 700;
-    display: block;
-    font-size: 18px;
-}
-
-
-.modaal-content-container {
-    padding: initial !important;
-}
-
-a {
-    text-decoration: none;
-}
-
-.modaal-overlay {
-    z-index: 9000;
-}
-
-#info {
-    display: none;
-}
-
-/*モーダルの横幅を変更したい場合*/
-.modaal-container {
-    width: 1000px;
-    height: 542px;
-    margin: auto;
-    border: #65A650 solid 10px;
-}
-
-
-/*モーダルのボタンの色を変更したい場合*/
-.modaal-close:after,
-.modaal-close:before {
-    background: #65A650 !important;
-}
-
-.modaal-close:focus:after,
-.modaal-close:focus:before,
-.modaal-close:hover:after,
-.modaal-close:hover:before {
-    background: #65A650;
-}
-
-
-/* 頼むならこれ */
-
-
-#tanomu {
-    background-color: #F6F8E8;
-}
-
-
-.circle_1 {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background: #ff9894;
-    /*背景色*/
-    mix-blend-mode: multiply;
-
-}
-
-.circle_2 {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background: #ff9894;
-    /*背景色*/
-    mix-blend-mode: multiply;
-    top: -40px;
-    position: relative;
-}
-
-.tanomu_pasuta {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 700;
-    position: relative;
-
-    top: -228px;
-    left: -24px
-}
-
-
-.tanomu_oiru {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 700;
-    position: relative;
-    top: -159px;
-    left: -22px;
-}
-
-.tanomu_kakeru {
-
-    color: #fff;
-    font-size: 30px;
-    font-weight: 700;
-    position: relative;
-    top: -259px;
-    left: -26px;
-}
-
-.tanomu_syoukai {
-    font-size: 12px;
-    top: -90px;
-    position: relative;
-    left: -17px;
-    text-align: initial;
-
-}
-
-.tanomu_ex {
-    width: 190px;
-    display: inline-block;
-    padding: 15px;
-}
-
-.content4 {
-    text-align: center;
-    margin-top: 100px;
-}
-
-
-
-/* 頑張れるに日には */
-
-#ganbaru {
-    padding-bottom: 30px;
-}
-
-.ganbaru_content {
-    padding-left: 100px;
-}
-
-.ganbaru_photo {
-    border-radius: 8%;
-    box-shadow: 2px 2px 5px #5b5b5b;
-    width: 300px;
-    height: 300px;
-}
-
-.ganbaru_foods {
-    position: relative;
-    width: 25%;
-    margin-bottom: 100px;
-    margin: 60px 50px;
-    text-align: center;
-}
-
-.ganbaru_name {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
-    color: #403E38;
-
-}
-
-.ganbaru_shyoukai {
-    font-size: 14px;
-    line-height: 24px;
-    width: 22vw;
-    margin-top: 25px;
-    margin-left: 20px;
-}
-
-.ganbaru_text {
-    width: 400px;
-    position: relative;
-    z-index: 20;
-    margin-left: 50px;
-}
-
-.minites {
-    color: #fff;
-    font-size: 30px;
-    font-weight: 700;
-    background-color: #65A650;
-    border-radius: 50%;
-    display: block;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    line-height: 100px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 0;
-}
-
-.minites span {
-    font-size: 20px;
-}
-
-.ganbaru_katamuki {
-    transform: rotate(-25deg);
-}
-
-.sankaku {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 26px 0 26px 171px;
-    border-color: transparent transparent transparent #F6F8E8;
-    position: absolute;
-    bottom: 0;
-    z-index: -2;
-    transform: rotate(-10deg);
-}
-
-.karikarisalada {
-    position: relative;
-    width: 400px;
-    margin: 60px 50px;
-}
-
-.sankaku1 {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 26px 0 26px 171px;
-    border-color: transparent transparent transparent #F6F8E8;
-    transform: translate(-50%, -50%);
-    top: -20px;
-    z-index: -1;
-    position: absolute;
-    transform: rotate(-13deg);
-}
-
-.ganbaru_foods_under {
-    display: flex;
-    justify-content: center;
-}
-
-.ganbaru_foods_over {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-
-}
-
-.namae_under {
-    margin-top: 40px;
-    color: #403E38;
-}
-
-
-
-.sample1 .caption {
-    font-size: 14px;
-    padding: 50px 30px 0;
-    color: #fff;
-    letter-spacing: 0.1rem;
-    line-height: 25px;
-    text-align: initial;
-
-}
-
-.mask{
-    position: absolute;
-    left:30px
-}
-
-.sample1 .mask {
-    width: 83.5%;
-    height: 80.6%;
-    border-radius: 22px;
-    position: absolute;
-    /* 絶対位置指定 */
-    top: 0;
-    left: 30px;
-    opacity: 0;
-    /* マスクを表示しない */
-    background-color: rgba(0, 0, 0, 0.7);
-    /* マスクは半透明 */
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    text-align: initial;
-}
-
-.sample1:hover .mask {
-    opacity: 1;
-
-    /* マスクを表示する */
-}
-
-
-#ganbaru a {
-    position: relative;
-    display: inline-block;
-    transition: .3s;
-    display: inline-block;
-  transition: .3s;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  }
-
-#ganbaru a:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    
-  }
-  
-
-#ganbaru a::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: '';
-    width: 0;
-    height: 5px;
-    background-color: #ff9894;
-    transition: .5s;
-  }
-
-#ganbaru a:hover::after {
-    width: 100%;
-  }
-.sarch{
-    display: flex;
-}
-
-/* しめ */
-#sime {
-    padding-top: 100px;
-}
-
-.sime_blur {
-    background-image: url("images/sime.jpg");
-    background-size: cover;
-    position: relative;
-    z-index: 0;
-
-
-}
-
-.sime_blur::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    bottom: -5px;
-    left: -5px;
-    right: -5px;
-    background: inherit;
-    filter: blur(2px);
-    /* position:absoluteのせいで最前面に来てしまうため */
-    z-index: -1;
-}
-
-.sime_title {
-    color: white;
-    text-align: center;
-    font-size: 32px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 60px 0;
-    font-weight: 700;
-    letter-spacing: 1.3rem;
-}
-
-.sime_bun {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 45px;
-    text-align: center;
-    text-align: center;
-    letter-spacing: 0.49em;
-    color: #FFFFFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 60px 0;
-}
-
-#motto {
-    padding: 100px 200px 1px;
-    background-color: #F6F8E8;
-}
-
-.motto_mozi {
-    font-size: 26px;
-    line-height: 40px;
-    text-align: center;
-    letter-spacing: 0.3em;
-    font-weight: 00;
-    margin: 30px 0;
-}
-
-#motto a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    width: 27%;
-    padding: 10px;
-    background-color: #65A650;
-    display: inline-block;
-    letter-spacing: 0.2rem;
-    margin: 10px;
-    border-radius: 15px;
-    margin: 100px 17px;
-
-}
-
-
-
-.btn {
-    /*アニメーションの起点とするためrelativeを指定*/
-    position: relative;
-    overflow: hidden;
-    /*ボタンの形状*/
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 15px;
-    text-align: center;
-    outline: none;
-    /*アニメーションの指定*/
-    transition: ease .2s;
-}
-
-/*ボタン内spanの形状*/
-.btn span {
-    position: relative;
-    z-index: 3;
-    /*z-indexの数値をあげて文字を背景よりも手前に表示*/
-    color: #fff;
-}
-
-.btn:hover span {
-    color: #65A650;
-}
-
-/*== 背景が流れる（左から右） */
-.bgleft:before {
-    content: '';
-    /*絶対配置で位置を指定*/
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    /*色や形状*/
-    background: #fff;
-    /*背景色*/
-    width: 100%;
-    height: 100%;
-    /*アニメーション*/
-    transition: transform .5s cubic-bezier(0.8, 0, 0.2, 1) 0s;
-    transform: scale(0, 1);
-    transform-origin: right top;
-}
-
-/*hoverした際の形状*/
-.bgleft:hover:before {
-    transform-origin: left top;
-    transform: scale(1, 1);
-}
-
-
-footer {
-    background-color: #ff9894;
-    text-align: center;
-}
-
-footer p {
-    color: #fff;
-    font-size: 16px;
-    letter-spacing: 0.8rem;
-    padding: 20px 0;
-}
-
-
-#topbutton {
-    /* ▼ボタンの表示位置を画面の右下に固定 */
-    position: fixed;
-    /* ←表示場所を固定 */
-    bottom: 68px;
-    /* ←下端からの距離 */
-    right: 18px;
-    /* ←右端からの距離 */
-    width: 40px;
-    height: 40px;
-
-    /* ▼最初は非表示にしておく */
-    display: none;
-
-    /* ▼配色・配置・文字の装飾など */
-    background-image: url(images/tophe.png);
-    /* ←背景色 */
-    background-size: cover;
-    text-align: center;
-    /* ←文字の位置 */
-    font-size: 16px;
-    /* ←文字サイズ */
-    margin: 0px;
-    /* ←外側の余白 */
-    padding: 10px;
-    /* ←内側の余白 */
-    z-index: 800;
-}
-
-#topbutton a {
-    /* ▼リンクの装飾 */
-    color: #65A650;
-    /* ←文字色 */
-    text-decoration: none;
-    /* ←下線なし */
-    display: block;
-    margin-top: 10px;
-}
-
-#topbutton a:hover {
-    /* ▼マウスが載ったときの装飾 */
-    /* ←文字色 */
-    text-decoration: underline;
-    /* ←下線あり */
-}
-
-
-
-
-
-
-
-
-/* ここからレスポンシブ */
-
-
-@media screen and (min-width: 801px) {
-    #sp_top {
-        display: none !important;
-
-    }
-
-    #sp_plus {
-        display: none;
-
-    }
-
-    .sp_br {
-        display: none;
-    }
-
-    #motto1 {
-        display: none;
-    }
-
-}
-
-
-@media screen and (max-width: 800px) {
-    * {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-
-    }
-
-    html {
-        scroll-behavior: smooth;
-        overflow-x: initial;
-        overflow-x: hidden;
-    }
-
-    .body{
-        overflow: hidden;
-    }
-
-    #top {
-        display: none;
-    }
-
-    #pc_plus {
-        display: none;
-    }
-
-    #sp_top {
-        width: 100vw;
-    }
-
-    #motto {
-        display: none;
-    }
-
-    #tophe{
-        display: none;
-    }
-
-    .sp_top_h1 {
-        text-align: center;
-        height: 100vh;
-        background-size: cover;
-        background-image: url(images/top.jpg);
-    }
-
-    .sp_top_h1 p {
-        padding-top: 300px;
-        color: #fff;
-        font-weight: 400;
-        font-size: 36px;
-        line-height: 200%;
-        text-align: center;
-        letter-spacing: 0.17em;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    }
-
-    .is-open {
-        overflow: hidden;
-    }
-
-    .is-open #nav-content {
-        z-index: 999;
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .is-open #nav-content a {
-        pointer-events: auto;
-    }
-
-
-    .saizen {
-        z-index: 1000;
-    }
-
-    .fit1 {
-        color: #403E38;
-        font-size: 12px;
-        line-height: 50px;
-        letter-spacing: 0.2rem;
-        font-weight: 500;
-        text-align: center;
-        background-color: #F6F8E8;
-        width: 100%;
-        
-    }
-
-
-
-    h2 {
-        font-size: 20px;
-    }
-
-
-    .matome {
-        font-size: 12px;
-        line-height: 25px;
-    }
-
-
-    /* 現在の食生活 */
-
-
-    .eat {
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .genzai_content {
-        display: block;
-        margin: 0 auto;
-        width: 80%;
-        text-align: center;
-    }
-
-
-    .maru_mozi span {
-        font-size: 40px;
-    }
-
-    .card {
-        position: relative;
-        margin: 0 auto;
-    }
-
-    .maru {
-        left: -82px;
-    }
-
-
-
-
-    /* ホバー時のカード裏面 */
-    .card:hover .back {
-        transform: rotateY(180deg);
-    }
-
-    .maru_mozi {
-        font-size: 20px;
-        font-weight: 400;
-        text-align: center;
-        padding-top: 50px;
-        line-height: 50px;
-
-    }
-
-    .maru_mozi span {
-        font-size: 40px;
-    }
-
-    /* ホバー時のカード表面 */
-    .card:hover .front {
-        transform: rotateY(0);
-    }
-
-    /* 理想の食生活 */
-    #risou {
-        background-color: #F6F8E8;
-        height: 1300px;
-    }
-
-
-    #risou img {
-        width: 200px;
-
-        display: block;
-        margin-right: -240px;
-        padding-left: 42px;
-
-    }
-
-    .risou_img {
-        display: block;
-        position: relative;
-
-    }
-
-    .points {
-        position: relative;
-        top: 215px;
-    }
-
-    h3 span {
-        font-size: 12px;
-        height: 100px;
-        position: absolute;
-        color: #403E38;
-        margin: 15px;
-    }
-
-
-
-    .risou_mozi {
-        line-height: 1.3rem;
-        display: inline-block;
-        font-size: 10px;
-        padding: 10px 20px;
-        border: solid #403E38 1px;
-        z-index: 20;
-        box-shadow: 10px 10px #ff9894;
-        text-align: center;
-        width: 225px;
-        height: 65px;
-    }
-
-    .risou_mozi_small {
-        line-height: 1.3rem;
-        position: relative;
-        top: 12px;
-        left: 20px;
-        display: inline-block;
-        width: 200px;
-        height: 45px;
-        font-size: 10px;
-        padding: 17px 30px;
-        border: solid #403E38 1px;
-        z-index: 20;
-        box-shadow: 10px 10px #FF9894;
-        text-align: center;
-    }
-
-    .point {
-        margin: 40px 40px;
-        display: block;
-    }
-
-    .content2 {
-        margin: 50px 0;
-    }
-
-
-
-    /* ＋αで健康に */
-
-    #sp_plus {
-        background: repeating-linear-gradient(135deg, #F6F8E8, #F6F8E8 90px, #fff 90px, #fff 180px);
-
-    }
-
-    .content_sp_plus {
-        padding-bottom: 200px;
-    }
-
-    .button {
-        color: #fff;
-        background-color: #ff9894;
-        display: block;
-        width: 100px;
-        margin: 0 auto;
-        padding: 10px;
-        text-align: center;
-        border-radius: 5px;
-    }
-
-    .a_center {
-        text-align: center;
-    }
-
-    .modal_photo {
-        width: 180px;
-
-    }
-
-    .main-content-container {
-        max-width: 940px;
-        margin: 0 auto;
-        padding: 30px;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-    }
-
-    .container {
-        border-right: none;
-    }
-
-
-
-    .containers:last-child {
-        border-bottom: none;
-    }
-
-    .container:last-child {
-        border-right: none;
-    }
-
-
-
-    .baner {
-        width: 200px;
-        margin: 0 41px;
-    }
-
-
-    .modal_syoukai {
-        height: 234px;
-        width: 280px;
-        padding: 35px 25px;
-    }
-
-    .modal_title1 {
-        font-size: 18px;
-        margin-bottom: -30px;
-    
-    }
-
-    .modal_text span{
-        font-weight: 500;
-        display: block;
-        font-size: 14px;
-    }
-    
-
-
-    .modal_text {
-        font-size: 10px;
-        line-height: 15px;
-        width: 230px;
-    }
-
-
-    .modaal-content-container {
-        padding: initial !important;
-        text-align: center;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    .modaal-overlay {
-        z-index: 9000;
-    }
-
-    #info {
-        display: none;
-    }
-
-    /*モーダルの横幅を変更したい場合*/
-    .modaal-container {
-        width: 300px;
-        height: 530px;
-        margin: auto;
-        border: #65A650 solid 10px;
-    }
-
-
-    /*モーダルのボタンの色を変更したい場合*/
-    .modaal-close:after,
-    .modaal-close:before {
-        background: #65A650 !important;
-    }
-
-    .modaal-close:focus:after,
-    .modaal-close:focus:before,
-    .modaal-close:hover:after,
-    .modaal-close:hover:before {
-        background: #65A650;
-    }
-
-
-
-
-    .tanomu_ex {
-        width: 190px;
-        display: inline-block;
-        padding: 15px;
-        padding-left: 50px;
-    }
-
-    .ura_modal {
-        position: relative;
-    }
-
-    .modal_content{
-        margin: 0 auto;
- 
-    text-align: initial;
-}
-    
-
-    /* .red_circle {
+	@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+
+	* {
+	    margin: 0;
+	    list-style: none;
+
+	}
+
+	#wrapper {
+	    width: 100%;
+	    overflow-x: hidden !important;
+	}
+
+
+	body {
+	    font-family: 'Noto Sans JP', sans-serif;
+	}
+
+	html {
+	    scroll-behavior: smooth;
+	    overflow: auto;
+	    overflow-x: hidden;
+	}
+
+	#top {
+	    background-image: url(images/top.png);
+	    background-size: 100%;
+	    width: 100vw;
+	    height: 130vw;
+	    background-repeat: no-repeat;
+	    background-color: #F6F8E8;
+
+	}
+
+	.saizen {
+	    z-index: 1000;
+	}
+
+
+	/* ハンバーガー  */
+
+	.toggle {
+	    position: fixed;
+	    top: 20px;
+	    left: 20px;
+	}
+
+	.toggle-box {
+	    position: relative;
+	    width: 40px;
+	    height: 20px;
+	}
+
+	.toggle-box>span {
+	    width: 100%;
+	    height: 1px;
+	    left: 0;
+	    display: block;
+	    background: #ff9894;
+	    position: absolute;
+	    transition: transform .6s ease-in-out, top .5s ease, bottom .5s ease;
+	}
+
+	.toggle-box>span:nth-child(1) {
+	    top: 0;
+	}
+
+	.toggle-box>span:nth-child(2) {
+	    top: 50%;
+	    transform: translatey(-50%);
+	}
+
+	.toggle-box>span:nth-child(3) {
+	    bottom: 0;
+	}
+
+	.is-open .toggle-box>span {
+	    background: #fff;
+	}
+
+	.is-open .toggle-box>span:nth-child(1) {
+	    top: 50%;
+	    transform: rotate(45deg) translatey(-50%);
+	}
+
+	.is-open .toggle-box>span:nth-child(2) {
+	    width: 0;
+	}
+
+	.is-open .toggle-box>span:nth-child(3) {
+	    top: 50%;
+	    transform: rotate(-45deg) translatey(-50%);
+	}
+
+
+	/* z-index */
+	.toggle {
+	    z-index: 1000;
+	}
+
+	.nav-content {
+	    z-index: 900;
+	    overflow: auto;
+	    width: 100%;
+	    height: 100%;
+	    background-image: linear-gradient(45deg, #ff9894 30%, #FFFD94 100%);
+	    color: #fff;
+	    font-size: 16px;
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    text-align: center;
+	    opacity: 0;
+	    visibility: hidden;
+	    transition: opacity .6s ease, visibility .6s ease;
+	}
+
+	.nav-content ul {
+	    list-style: none;
+	    padding: 0;
+	}
+
+	.nav-content a {
+	    display: block;
+	    color: #fff;
+	    text-decoration: none;
+	    padding: 30px 0;
+	    transition: opacity .6s ease;
+	    pointer-events: none;
+	}
+
+	.nav-content a:hover {
+	    opacity: 0.6;
+	}
+
+	.is-open {
+	    overflow: hidden;
+	}
+
+	.is-open .nav-content {
+	    z-index: 999;
+	    visibility: visible;
+	    opacity: 1;
+	}
+
+	.is-open .nav-content a {
+	    pointer-events: auto;
+	}
+
+
+
+
+	.top_top {
+	    display: flex;
+	}
+
+
+	#top h1 {
+	    color: #403E38;
+	    font-weight: 700;
+	    font-size: 80px;
+	    line-height: 100px;
+	    text-align: center;
+	    letter-spacing: 0.1em;
+	    margin: auto 40px;
+	    float: left;
+
+	}
+
+
+
+
+	#top img {
+	    right: 0;
+	    margin-left: auto;
+	    width: 50vw;
+	    height: 100vh;
+	    display: block;
+	}
+
+	.fit {
+	    position: relative;
+	    top: 26%;
+	    left: 57vw;
+	    color: #403E38;
+	    font-size: 16px;
+	    line-height: 50px;
+	    letter-spacing: 0.7rem;
+	    font-weight: 700;
+	    display: inline-block;
+	    text-align: center;
+	    z-index: 600;
+	}
+
+	.sticky {
+	    background-color: #F6F8E8;
+	    width: 50vw;
+	    height: 100vh;
+	    position: -webkit-sticky;
+	    position: sticky;
+	    top: 0;
+	    left: 0;
+	    color: #fff;
+	    display: flex;
+	    font-size: 44px;
+	    font-weight: bold;
+	    align-item: center;
+	    justify-content: center;
+	    flex-direction: column;
+	    text-align: center;
+
+	}
+
+
+	h2 {
+	    font-size: 32px;
+	    padding-top: 80px;
+	    padding-bottom: 40px;
+	    text-align: center;
+	    letter-spacing: 0.25rem;
+	    color: #403E38;
+	}
+
+	h2 span {
+	    background: linear-gradient(transparent 50%, #FFFD94 0%);
+	}
+
+
+
+	/* 現在の食生活 */
+
+	.time {
+	    color: #403E38;
+	    font-size: 24px;
+	    font-weight: 700;
+	    padding: 60px 0;
+	}
+
+	.eat {
+
+	    margin: 0 auto;
+	}
+
+	.genzai_content {
+	    display: flex;
+	    margin: 0 auto;
+	    width: 80%;
+	    margin-bottom: -60px;
+	}
+
+
+
+
+	/* カード本体 */
+	.card {
+	    width: 23%;
+	    /* 任意の横幅を指定 */
+	    position: relative;
+	    display: block;
+	}
+
+	/* 擬似要素とpadding-topでカードの高さを指定 */
+	.card::before {
+	    content: "";
+	    display: block;
+	    padding-top: 430px;
+	}
+
+
+
+	/* カード裏面・表面の共通スタイル */
+	.card .back,
+	.card .front {
+	    transition: all 0.6s;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    height: 110%;
+	    width: 100%;
+	    backface-visibility: hidden;
+	}
+
+	/* カード表面のスタイル */
+	.card .front {
+	    transform: rotateY(-180deg);
+	}
+
+	/* ホバー時のカード裏面 */
+	.card:hover .back {
+	    transform: rotateY(180deg);
+	}
+
+	.maru_mozi {
+	    font-size: 20px;
+	    font-weight: 400;
+	    text-align: center;
+	    padding-top: 50px;
+	    line-height: 50px;
+
+	}
+
+	.maru_mozi span {
+	    font-size: 40px;
+	}
+
+	/* ホバー時のカード表面 */
+	.card:hover .front {
+	    transform: rotateY(0);
+	}
+
+
+
+	.maru {
+	    width: 200px;
+	    height: 200px;
+	    object-fit: cover;
+	    border-radius: 50%;
+	    border: 1px solid #403E38;
+	    padding: 20px;
+	    background-color: #FFFD94;
+	    position: relative;
+	    left: -100px;
+	}
+
+	.maru_banana {
+	    object-position: 29% 50%;
+	}
+
+	.maru_ramen {
+	    object-position: 29% 99%;
+	    ;
+	}
+
+	.matome {
+	    text-align: center;
+	    letter-spacing: 0.13em;
+	    color: #403E38;
+	    line-height: 3rem;
+	    margin: 10vh 0;
+	    clear: both;
+
+	}
+
+	/* 理想の食生活 */
+	#risou {
+	    background-color: #F6F8E8;
+	    height: 1000px;
+	}
+
+	#risou h3 {
+	    display: inline-block;
+	    text-align: center;
+	    font-weight: 400;
+	    position: relative;
+	    font-size: 1.5rem;
+	    z-index: 40;
+	    top: -22px;
+	    left: 10px;
+
+	}
+
+	#risou img {
+	    width: 400px;
+	    margin-left: 10vw;
+	    margin-top: -5vh;
+	    float: left;
+	}
+
+
+	h3 span {
+	    font-size: 12px;
+	    height: 100px;
+	    position: absolute;
+	    color: #403E38;
+	    margin: 15px;
+	}
+
+	.char1 {
+	    transform: rotate(-63deg);
+	}
+
+	.char2 {
+	    transform: rotate(-50deg);
+	}
+
+	.char3 {
+	    transform: rotate(-37deg);
+	}
+
+	.char4 {
+	    transform: rotate(-24deg);
+	}
+
+	.char5 {
+	    transform: rotate(-11deg);
+	}
+
+
+
+	.number {
+	    font-weight: 700;
+	    font-size: 24px;
+	    position: absolute;
+	    padding: 10px;
+	    background-color: #F6F8E8;
+	    z-index: 30;
+
+	}
+
+	.risou_mozi {
+	    line-height: 1.3rem;
+	    line-height: 1.3rem;
+	    position: relative;
+	    top: 25px;
+	    left: 20px;
+	    display: inline-block;
+	    font-size: 12px;
+	    padding: 21px;
+	    border: solid #403E38;
+	    z-index: 20;
+	    box-shadow: 10px 10px #ff9894;
+	    text-align: center;
+	    width: 254px;
+	    height: 65px;
+	}
+
+	.risou_mozi_small {
+	    line-height: 1.3rem;
+	    position: relative;
+	    top: 12px;
+	    left: 20px;
+	    display: inline-block;
+	    width: 200px;
+	    height: 45px;
+	    font-size: 12px;
+	    padding: 30px;
+	    border: solid #403E38;
+	    z-index: 20;
+	    box-shadow: 10px 10px #FF9894;
+	    text-align: center;
+	}
+
+	.point {
+	    margin: 40px 60px;
+	    display: inline-block;
+	    position: relative;
+
+	}
+
+
+
+	#risou img {
+	    float: left;
+	}
+
+	.content2 {
+	    margin: 50px 0;
+	}
+
+
+
+	/* ＋αで健康に */
+
+
+
+	#pc_plus {
+
+	    background: repeating-linear-gradient(135deg, #F6F8E8, #F6F8E8 90px, #fff 90px, #fff 180px);
+
+	}
+
+
+	#pc_plus a {
+	    display: inline-block;
+	    transition: .3s;
+	    -webkit-transform: scale(1);
+	    transform: scale(1);
+	    margin: -25px 172px 7px 53px;
+	    width: 153px;
+	}
+
+	#pc_plus a:hover {
+	    -webkit-transform: scale(1.1);
+	    transform: scale(1.1);
+	}
+
+	.modal-open {
+	    margin: 0 70px;
+	    width: 40px;
+	}
+
+	.modal_photo {
+	    width: 180px;
+	}
+
+	.main-content-container {
+	    max-width: 940px;
+	    margin: 0 auto;
+	    padding: 30px;
+	    display: flex;
+	    flex-flow: row wrap;
+	    justify-content: center;
+	}
+
+	.container {
+	    width: calc(100% / 3);
+	    box-sizing: border-box;
+	    margin: 10px 0;
+	    border-right: #65A650 solid;
+	    width: 275px;
+	    text-align: ;
+	}
+
+	.containers {
+	    display: flex;
+	    border-bottom: #65A650 solid;
+	}
+
+	.containers:last-child {
+	    border-bottom: none;
+	}
+
+	.container:last-child {
+	    border-right: none;
+	}
+
+
+
+	.baner {
+	    width: 410px;
+	    margin-left: 30px;
+	}
+
+	.ura_modal {
+	    height: 600px;
+	}
+
+	.modal_syoukai {
+	    background-color: #F6F8E8 !important;
+	    height: 100%;
+	    float: right;
+	    width: 500px;
+	    height: 522px;
+	}
+
+	.modal_content {
+	    margin: 0 auto;
+	    width: 365px;
+	    margin-top: 106px;
+
+	}
+
+	.modal_title1 {
+	    font-weight: 700;
+	    font-size: 36px;
+	    line-height: 34px;
+	    color: #403E38;
+	    padding-bottom: 60px;
+	}
+
+
+	.modal_text {
+	    font-weight: 400;
+	    line-height: 38px;
+	    font-size: 14px;
+	}
+
+	.modal_text span {
+	    font-weight: 700;
+	    display: block;
+	    font-size: 18px;
+	}
+
+
+	.modaal-content-container {
+	    padding: initial !important;
+	}
+
+	a {
+	    text-decoration: none;
+	}
+
+	.modaal-overlay {
+	    z-index: 9000;
+	}
+
+	#info {
+	    display: none;
+	}
+
+	/*モーダルの横幅を変更したい場合*/
+	.modaal-container {
+	    width: 1000px;
+	    height: 542px;
+	    margin: auto;
+	    border: #65A650 solid 10px;
+	}
+
+
+	/*モーダルのボタンの色を変更したい場合*/
+	.modaal-close:after,
+	.modaal-close:before {
+	    background: #65A650 !important;
+	}
+
+	.modaal-close:focus:after,
+	.modaal-close:focus:before,
+	.modaal-close:hover:after,
+	.modaal-close:hover:before {
+	    background: #65A650;
+	}
+
+
+	/* 頼むならこれ */
+
+
+	#tanomu {
+	    background-color: #F6F8E8;
+	}
+
+
+	.circle_1 {
+	    width: 140px;
+	    height: 140px;
+	    border-radius: 50%;
+	    background: #ff9894;
+	    /*背景色*/
+	    mix-blend-mode: multiply;
+
+	}
+
+	.circle_2 {
+	    width: 140px;
+	    height: 140px;
+	    border-radius: 50%;
+	    background: #ff9894;
+	    /*背景色*/
+	    mix-blend-mode: multiply;
+	    top: -40px;
+	    position: relative;
+	}
+
+	.tanomu_pasuta {
+	    color: #fff;
+	    font-size: 24px;
+	    font-weight: 700;
+	    position: relative;
+
+	    top: -228px;
+	    left: -24px
+	}
+
+
+	.tanomu_oiru {
+	    color: #fff;
+	    font-size: 24px;
+	    font-weight: 700;
+	    position: relative;
+	    top: -159px;
+	    left: -22px;
+	}
+
+	.tanomu_kakeru {
+
+	    color: #fff;
+	    font-size: 30px;
+	    font-weight: 700;
+	    position: relative;
+	    top: -259px;
+	    left: -26px;
+	}
+
+	.tanomu_syoukai {
+	    font-size: 12px;
+	    top: -90px;
+	    position: relative;
+	    left: -17px;
+	    text-align: initial;
+
+	}
+
+	.tanomu_ex {
+	    width: 190px;
+	    display: inline-block;
+	    padding: 15px;
+	}
+
+	.content4 {
+	    text-align: center;
+	    margin-top: 100px;
+	}
+
+
+
+	/* 頑張れるに日には */
+
+	#ganbaru {
+	    padding-bottom: 30px;
+	}
+
+	.ganbaru_content {
+	    padding-left: 100px;
+	}
+
+	.ganbaru_photo {
+	    border-radius: 8%;
+	    box-shadow: 2px 2px 5px #5b5b5b;
+	    width: 300px;
+	    height: 300px;
+	}
+
+	.ganbaru_foods {
+	    position: relative;
+	    width: 25%;
+	    margin-bottom: 100px;
+	    margin: 60px 50px;
+	    text-align: center;
+	}
+
+	.ganbaru_name {
+	    font-weight: 700;
+	    font-size: 20px;
+	    line-height: 30px;
+	    color: #403E38;
+
+	}
+
+	.ganbaru_shyoukai {
+	    font-size: 14px;
+	    line-height: 24px;
+	    width: 22vw;
+	    margin-top: 25px;
+	    margin-left: 20px;
+	}
+
+	.ganbaru_text {
+	    width: 400px;
+	    position: relative;
+	    z-index: 20;
+	    margin-left: 50px;
+	}
+
+	.minites {
+	    color: #fff;
+	    font-size: 30px;
+	    font-weight: 700;
+	    background-color: #65A650;
+	    border-radius: 50%;
+	    display: block;
+	    width: 100px;
+	    height: 100px;
+	    text-align: center;
+	    line-height: 100px;
+	    position: absolute;
+	    transform: translate(-50%, -50%);
+	    top: 0;
+	}
+
+	.minites span {
+	    font-size: 20px;
+	}
+
+	.ganbaru_katamuki {
+	    transform: rotate(-25deg);
+	}
+
+	.sankaku {
+	    width: 0;
+	    height: 0;
+	    border-style: solid;
+	    border-width: 26px 0 26px 171px;
+	    border-color: transparent transparent transparent #F6F8E8;
+	    position: absolute;
+	    bottom: 0;
+	    z-index: -2;
+	    transform: rotate(-10deg);
+	}
+
+	.karikarisalada {
+	    position: relative;
+	    width: 400px;
+	    margin: 60px 50px;
+	}
+
+	.sankaku1 {
+	    width: 0;
+	    height: 0;
+	    border-style: solid;
+	    border-width: 26px 0 26px 171px;
+	    border-color: transparent transparent transparent #F6F8E8;
+	    transform: translate(-50%, -50%);
+	    top: -20px;
+	    z-index: -1;
+	    position: absolute;
+	    transform: rotate(-13deg);
+	}
+
+	.ganbaru_foods_under {
+	    display: flex;
+	    justify-content: center;
+	}
+
+	.ganbaru_foods_over {
+	    display: flex;
+	    justify-content: center;
+	    width: 100vw;
+
+	}
+
+	.namae_under {
+	    margin-top: 40px;
+	    color: #403E38;
+	}
+
+
+
+	.sample1 .caption {
+	    font-size: 14px;
+	    padding: 50px 30px 0;
+	    color: #fff;
+	    letter-spacing: 0.1rem;
+	    line-height: 25px;
+	    text-align: initial;
+
+	}
+
+	.mask {
+	    position: absolute;
+	    left: 30px
+	}
+
+	.sample1 .mask {
+	    width: 83.5%;
+	    height: 80.6%;
+	    border-radius: 22px;
+	    position: absolute;
+	    /* 絶対位置指定 */
+	    top: 0;
+	    left: 30px;
+	    opacity: 0;
+	    /* マスクを表示しない */
+	    background-color: rgba(0, 0, 0, 0.7);
+	    /* マスクは半透明 */
+	    -webkit-transition: all 0.2s ease;
+	    transition: all 0.2s ease;
+	    text-align: initial;
+	}
+
+	.sample1:hover .mask {
+	    opacity: 1;
+
+	    /* マスクを表示する */
+	}
+
+
+	#ganbaru a {
+	    position: relative;
+	    display: inline-block;
+	    transition: .3s;
+	    display: inline-block;
+	    transition: .3s;
+	    -webkit-transform: scale(1);
+	    transform: scale(1);
+	}
+
+	#ganbaru a:hover {
+	    -webkit-transform: scale(1.1);
+	    transform: scale(1.1);
+
+	}
+
+
+	#ganbaru a::after {
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    content: '';
+	    width: 0;
+	    height: 5px;
+	    background-color: #ff9894;
+	    transition: .5s;
+	}
+
+	#ganbaru a:hover::after {
+	    width: 100%;
+	}
+
+	.sarch {
+	    display: flex;
+	}
+
+	/* しめ */
+	#sime {
+	    padding-top: 100px;
+	}
+
+	.sime_blur {
+	    background-image: url("images/sime.jpg");
+	    background-size: cover;
+	    position: relative;
+	    z-index: 0;
+
+
+	}
+
+	.sime_blur::before {
+	    content: '';
+	    position: absolute;
+	    top: -5px;
+	    bottom: -5px;
+	    left: -5px;
+	    right: -5px;
+	    background: inherit;
+	    filter: blur(2px);
+	    /* position:absoluteのせいで最前面に来てしまうため */
+	    z-index: -1;
+	}
+
+	.sime_title {
+	    color: white;
+	    text-align: center;
+	    font-size: 32px;
+	    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+	    padding: 60px 0;
+	    font-weight: 700;
+	    letter-spacing: 1.3rem;
+	}
+
+	.sime_bun {
+	    font-weight: 500;
+	    font-size: 16px;
+	    line-height: 45px;
+	    text-align: center;
+	    text-align: center;
+	    letter-spacing: 0.49em;
+	    color: #FFFFFF;
+	    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+	    padding: 60px 0;
+	}
+
+	#motto {
+	    padding: 100px 200px 1px;
+	    background-color: #F6F8E8;
+	}
+
+	.motto_mozi {
+	    font-size: 26px;
+	    line-height: 40px;
+	    text-align: center;
+	    letter-spacing: 0.3em;
+	    font-weight: 00;
+	    margin: 30px 0;
+	}
+
+	#motto a {
+	    text-decoration: none;
+	    color: #fff;
+	    font-size: 16px;
+	    width: 27%;
+	    padding: 10px;
+	    background-color: #65A650;
+	    display: inline-block;
+	    letter-spacing: 0.2rem;
+	    margin: 10px;
+	    border-radius: 15px;
+	    margin: 100px 17px;
+
+	}
+
+
+
+	.btn {
+	    /*アニメーションの起点とするためrelativeを指定*/
+	    position: relative;
+	    overflow: hidden;
+	    /*ボタンの形状*/
+	    text-decoration: none;
+	    display: inline-block;
+	    padding: 10px 15px;
+	    text-align: center;
+	    outline: none;
+	    /*アニメーションの指定*/
+	    transition: ease .2s;
+	}
+
+	/*ボタン内spanの形状*/
+	.btn span {
+	    position: relative;
+	    z-index: 3;
+	    /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	    color: #fff;
+	}
+
+	.btn:hover span {
+	    color: #65A650;
+	}
+
+	/*== 背景が流れる（左から右） */
+	.bgleft:before {
+	    content: '';
+	    /*絶対配置で位置を指定*/
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    z-index: 2;
+	    /*色や形状*/
+	    background: #fff;
+	    /*背景色*/
+	    width: 100%;
+	    height: 100%;
+	    /*アニメーション*/
+	    transition: transform .5s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+	    transform: scale(0, 1);
+	    transform-origin: right top;
+	}
+
+	/*hoverした際の形状*/
+	.bgleft:hover:before {
+	    transform-origin: left top;
+	    transform: scale(1, 1);
+	}
+
+
+	footer {
+	    background-color: #ff9894;
+	    text-align: center;
+	}
+
+	footer p {
+	    color: #fff;
+	    font-size: 16px;
+	    letter-spacing: 0.8rem;
+	    padding: 20px 0;
+	}
+
+
+	#topbutton {
+	    /* ▼ボタンの表示位置を画面の右下に固定 */
+	    position: fixed;
+	    /* ←表示場所を固定 */
+	    bottom: 68px;
+	    /* ←下端からの距離 */
+	    right: 18px;
+	    /* ←右端からの距離 */
+	    width: 40px;
+	    height: 40px;
+
+	    /* ▼最初は非表示にしておく */
+	    display: none;
+
+	    /* ▼配色・配置・文字の装飾など */
+	    background-image: url(images/tophe.png);
+	    /* ←背景色 */
+	    background-size: cover;
+	    text-align: center;
+	    /* ←文字の位置 */
+	    font-size: 16px;
+	    /* ←文字サイズ */
+	    margin: 0px;
+	    /* ←外側の余白 */
+	    padding: 10px;
+	    /* ←内側の余白 */
+	    z-index: 800;
+	}
+
+	#topbutton a {
+	    /* ▼リンクの装飾 */
+	    color: #65A650;
+	    /* ←文字色 */
+	    text-decoration: none;
+	    /* ←下線なし */
+	    display: block;
+	    margin-top: 10px;
+	}
+
+	#topbutton a:hover {
+	    /* ▼マウスが載ったときの装飾 */
+	    /* ←文字色 */
+	    text-decoration: underline;
+	    /* ←下線あり */
+	}
+
+
+
+
+
+
+
+
+	/* ここからレスポンシブ */
+
+
+	@media screen and (min-width: 801px) {
+	    #sp_top {
+	        display: none !important;
+
+	    }
+
+	    #sp_plus {
+	        display: none;
+
+	    }
+
+	    .sp_br {
+	        display: none;
+	    }
+
+	    #motto1 {
+	        display: none;
+	    }
+
+	}
+
+
+	@media screen and (max-width: 800px) {
+	    * {
+	        padding: 0;
+	        margin: 0;
+	        list-style: none;
+
+	    }
+
+
+	    #wrapper {
+	        width: 100%;
+	        overflow-x: hidden !important;
+	    }
+
+	    html {
+	        scroll-behavior: smooth;
+	        overflow-x: initial;
+	        overflow-x: hidden;
+	    }
+
+	    .body {
+	        overflow: hidden;
+	    }
+
+	    #top {
+	        display: none;
+	    }
+
+	    #pc_plus {
+	        display: none;
+	    }
+
+	    #sp_top {
+	        width: 100vw;
+	    }
+
+	    #motto {
+	        display: none;
+	    }
+
+	    #tophe {
+	        display: none;
+	    }
+
+	    .sp_top_h1 {
+	        text-align: center;
+	        height: 100vh;
+	        background-size: cover;
+	        background-image: url(images/top.jpg);
+	    }
+
+	    .sp_top_h1 p {
+	        padding-top: 300px;
+	        color: #fff;
+	        font-weight: 400;
+	        font-size: 36px;
+	        line-height: 200%;
+	        text-align: center;
+	        letter-spacing: 0.17em;
+	        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+	    }
+
+	    .is-open {
+	        overflow: hidden;
+	    }
+
+	    .is-open #nav-content {
+	        z-index: 999;
+	        visibility: visible;
+	        opacity: 1;
+	    }
+
+	    .is-open #nav-content a {
+	        pointer-events: auto;
+	    }
+
+
+	    .saizen {
+	        z-index: 1000;
+	    }
+
+	    .fit1 {
+	        color: #403E38;
+	        font-size: 12px;
+	        line-height: 50px;
+	        letter-spacing: 0.2rem;
+	        font-weight: 500;
+	        text-align: center;
+	        background-color: #F6F8E8;
+	        width: 100%;
+
+	    }
+
+
+
+	    h2 {
+	        font-size: 20px;
+	    }
+
+
+	    .matome {
+	        font-size: 12px;
+	        line-height: 25px;
+	    }
+
+
+	    /* 現在の食生活 */
+
+
+	    .eat {
+	        margin: 0 auto;
+	        text-align: center;
+	    }
+
+	    .genzai_content {
+	        display: block;
+	        margin: 0 auto;
+	        width: 80%;
+	        text-align: center;
+	    }
+
+
+	    .maru_mozi span {
+	        font-size: 40px;
+	    }
+
+	    .card {
+	        position: relative;
+	        margin: 0 auto;
+	    }
+
+	    .maru {
+	        left: -82px;
+	    }
+
+
+
+
+	    /* ホバー時のカード裏面 */
+	    .card:hover .back {
+	        transform: rotateY(180deg);
+	    }
+
+	    .maru_mozi {
+	        font-size: 20px;
+	        font-weight: 400;
+	        text-align: center;
+	        padding-top: 50px;
+	        line-height: 50px;
+
+	    }
+
+	    .maru_mozi span {
+	        font-size: 40px;
+	    }
+
+	    /* ホバー時のカード表面 */
+	    .card:hover .front {
+	        transform: rotateY(0);
+	    }
+
+	    /* 理想の食生活 */
+	    #risou {
+	        background-color: #F6F8E8;
+	        height: 1300px;
+	    }
+
+
+	    #risou img {
+	        width: 200px;
+
+	        display: block;
+	        margin-right: -240px;
+	        padding-left: 42px;
+
+	    }
+
+	    .risou_img {
+	        display: block;
+	        position: relative;
+
+	    }
+
+	    .points {
+	        position: relative;
+	        top: 215px;
+	    }
+
+	    h3 span {
+	        font-size: 12px;
+	        height: 100px;
+	        position: absolute;
+	        color: #403E38;
+	        margin: 15px;
+	    }
+
+
+
+	    .risou_mozi {
+	        line-height: 1.3rem;
+	        display: inline-block;
+	        font-size: 10px;
+	        padding: 10px 20px;
+	        border: solid #403E38 1px;
+	        z-index: 20;
+	        box-shadow: 10px 10px #ff9894;
+	        text-align: center;
+	        width: 225px;
+	        height: 65px;
+	    }
+
+	    .risou_mozi_small {
+	        line-height: 1.3rem;
+	        position: relative;
+	        top: 12px;
+	        left: 20px;
+	        display: inline-block;
+	        width: 200px;
+	        height: 45px;
+	        font-size: 10px;
+	        padding: 17px 30px;
+	        border: solid #403E38 1px;
+	        z-index: 20;
+	        box-shadow: 10px 10px #FF9894;
+	        text-align: center;
+	    }
+
+	    .point {
+	        margin: 40px 40px;
+	        display: block;
+	    }
+
+	    .content2 {
+	        margin: 50px 0;
+	    }
+
+
+
+	    /* ＋αで健康に */
+
+	    #sp_plus {
+	        background: repeating-linear-gradient(135deg, #F6F8E8, #F6F8E8 90px, #fff 90px, #fff 180px);
+
+	    }
+
+	    .content_sp_plus {
+	        padding-bottom: 200px;
+	    }
+
+	    .button {
+	        color: #fff;
+	        background-color: #ff9894;
+	        display: block;
+	        width: 100px;
+	        margin: 0 auto;
+	        padding: 10px;
+	        text-align: center;
+	        border-radius: 5px;
+	    }
+
+	    .a_center {
+	        text-align: center;
+	    }
+
+	    .modal_photo {
+	        width: 180px;
+
+	    }
+
+	    .main-content-container {
+	        max-width: 940px;
+	        margin: 0 auto;
+	        padding: 30px;
+	        display: flex;
+	        flex-flow: row wrap;
+	        justify-content: center;
+	    }
+
+	    .container {
+	        border-right: none;
+	    }
+
+
+
+	    .containers:last-child {
+	        border-bottom: none;
+	    }
+
+	    .container:last-child {
+	        border-right: none;
+	    }
+
+
+
+	    .baner {
+	        width: 200px;
+	        margin: 0 41px;
+	    }
+
+
+	    .modal_syoukai {
+	        height: 234px;
+	        width: 280px;
+	        padding: 35px 25px;
+	    }
+
+	    .modal_title1 {
+	        font-size: 18px;
+	        margin-bottom: -30px;
+
+	    }
+
+	    .modal_text span {
+	        font-weight: 500;
+	        display: block;
+	        font-size: 14px;
+	    }
+
+
+
+	    .modal_text {
+	        font-size: 10px;
+	        line-height: 15px;
+	        width: 230px;
+	    }
+
+
+	    .modaal-content-container {
+	        padding: initial !important;
+	        text-align: center;
+	    }
+
+	    a {
+	        text-decoration: none;
+	    }
+
+	    .modaal-overlay {
+	        z-index: 9000;
+	    }
+
+	    #info {
+	        display: none;
+	    }
+
+	    /*モーダルの横幅を変更したい場合*/
+	    .modaal-container {
+	        width: 300px;
+	        height: 530px;
+	        margin: auto;
+	        border: #65A650 solid 10px;
+	    }
+
+
+	    /*モーダルのボタンの色を変更したい場合*/
+	    .modaal-close:after,
+	    .modaal-close:before {
+	        background: #65A650 !important;
+	    }
+
+	    .modaal-close:focus:after,
+	    .modaal-close:focus:before,
+	    .modaal-close:hover:after,
+	    .modaal-close:hover:before {
+	        background: #65A650;
+	    }
+
+
+
+
+	    .tanomu_ex {
+	        width: 190px;
+	        display: inline-block;
+	        padding: 15px;
+	        padding-left: 50px;
+	    }
+
+	    .ura_modal {
+	        position: relative;
+	    }
+
+	    .modal_content {
+	        margin: 0 auto;
+
+	        text-align: initial;
+	    }
+
+
+	    /* .red_circle {
         position: absolute;
         top: -77px;
         left: -78px;
     } */
 
-    /* 頑張れるに日には */
+	    /* 頑張れるに日には */
 
 
 
-    .ganbaru_content {
-        padding-left: 30px;
-    }
+	    .ganbaru_content {
+	        padding-left: 30px;
+	    }
 
-    .ganbaru_photo {
-        border-radius: 8%;
-        box-shadow: 2px 2px 5px #5b5b5b;
-        width: 200px;
-        height: 200px;
-    }
-
-
-    .ganbaru_name {
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 30px;
-        margin-left: -10px;
-
-    }
-
-    .ganbaru_shyoukai {
-        font-size: 10px;
-        line-height: 24px;
-        width: 66vw;
-        margin: 10px 0;
-        margin-left: -10px;
-
-    }
-
-    .ganbaru_text {
-        width: 400px;
-        position: relative;
-        z-index: 20;
-        margin-left: 50px;
-    }
+	    .ganbaru_photo {
+	        border-radius: 8%;
+	        box-shadow: 2px 2px 5px #5b5b5b;
+	        width: 200px;
+	        height: 200px;
+	    }
 
 
+	    .ganbaru_name {
+	        font-weight: 700;
+	        font-size: 16px;
+	        line-height: 30px;
+	        margin-left: -10px;
 
-    .karikarisalada {
-        position: relative;
-        width: 400px;
-        margin: 60px 50px;
-    }
+	    }
 
+	    .ganbaru_shyoukai {
+	        font-size: 10px;
+	        line-height: 24px;
+	        width: 66vw;
+	        margin: 10px 0;
+	        margin-left: -10px;
 
-    .ganbaru_foods_under {
-        display: block;
-        justify-content: center;
-    }
+	    }
 
-    .ganbaru_foods_over {
-        display: block;
-        justify-content: center;
-        width: 100vw;
-
-    }
-
-    .namae_under {
-        margin-top: 40px;
-        width: 206px;
-        margin-bottom: 100px;
-    }
-
-
-    .sample1 .caption {
-        font-size: 10px;
-        padding: 30px 10px 0;
-        color: #fff;
-        letter-spacing: 0.1rem;
-        line-height: 20px;
-
-    }
-
-    .sample1 .mask {
-        width: 228%;
-        height: 53.6%;
-        border-radius: 22px;
-        position: absolute;
-        /* 絶対位置指定 */
-        top: 0;
-        left: 0;
-        opacity: 0;
-        /* マスクを表示しない */
-        background-color: rgba(0, 0, 0, 0.7);
-        /* マスクは半透明 */
-        -webkit-transition: all 0.2s ease;
-        transition: all 0.2s ease;
-        text-align: initial;
-    }
-
-    .sample1 .mask1 {
-
-        height: 53.6%;
-        text-align: initial;
-
-    }
+	    .ganbaru_text {
+	        width: 400px;
+	        position: relative;
+	        z-index: 20;
+	        margin-left: 50px;
+	    }
 
 
 
+	    .karikarisalada {
+	        position: relative;
+	        width: 400px;
+	        margin: 60px 50px;
+	    }
 
 
-    .sample1:checked .mask {
-        opacity: 1;
-        /* マスクを表示する */
-    }
+	    .ganbaru_foods_under {
+	        display: block;
+	        justify-content: center;
+	    }
+
+	    .ganbaru_foods_over {
+	        display: block;
+	        justify-content: center;
+	        width: 100vw;
+
+	    }
+
+	    .namae_under {
+	        margin-top: 40px;
+	        width: 206px;
+	        margin-bottom: 100px;
+	    }
 
 
-    .minites {
+	    .sample1 .caption {
+	        font-size: 10px;
+	        padding: 30px 10px 0;
+	        color: #fff;
+	        letter-spacing: 0.1rem;
+	        line-height: 20px;
 
-        font-size: 16px;
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
+	    }
 
-    }
+	    .sample1 .mask {
+	        width: 228%;
+	        height: 53.6%;
+	        border-radius: 22px;
+	        position: absolute;
+	        /* 絶対位置指定 */
+	        top: 0;
+	        left: 0;
+	        opacity: 0;
+	        /* マスクを表示しない */
+	        background-color: rgba(0, 0, 0, 0.7);
+	        /* マスクは半透明 */
+	        -webkit-transition: all 0.2s ease;
+	        transition: all 0.2s ease;
+	        text-align: initial;
+	    }
 
+	    .sample1 .mask1 {
 
-    .sime_title {
-        line-height: 3rem;
-        font-size: 24px;
-        padding: 60px 0;
-        font-weight: 700;
-        letter-spacing: 0.3rem;
-    }
+	        height: 53.6%;
+	        text-align: initial;
 
-    .sime_bun {
-        font-size: 14px;
-        letter-spacing: 0.3em;
-        padding: 35px 0;
-    }
-
-    #motto1 {
-        text-align: center;
-        background-color: #F6F8E8;
-    }
-
-    .motto_mozi1 {
-        font-size: 18px;
-        line-height: 40px;
-        letter-spacing: 0.2em;
-        font-weight: 400;
-        display: inline;
-    }
-
-    #motto1 p {
-        font-size: 18px;
-        padding: 50px 0;
-        display: block;
-    }
-
-    #motto1 a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 12px;
-        background-color: #65A650;
-        letter-spacing: 0.1rem;
-        border-radius: 15px;
-        display: block;
-        width: 50%;
-        margin: 20px auto;
-
-    }
+	    }
 
 
 
-    .btn {
-        /*アニメーションの起点とするためrelativeを指定*/
-        position: relative;
-        overflow: hidden;
-        /*ボタンの形状*/
-        text-decoration: none;
-        display: inline-block;
-        padding: 10px 15px;
-        text-align: center;
-        outline: none;
-        /*アニメーションの指定*/
-        transition: ease .2s;
-    }
-
-    /*ボタン内spanの形状*/
-    .btn span {
-        position: relative;
-        z-index: 3;
-        /*z-indexの数値をあげて文字を背景よりも手前に表示*/
-        color: #fff;
-    }
-
-    .btn:hover span {
-        color: #65A650;
-    }
-
-    /*== 背景が流れる（左から右） */
-    .bgleft:before {
-        content: '';
-        /*絶対配置で位置を指定*/
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        /*色や形状*/
-        background: #fff;
-        /*背景色*/
-        width: 100%;
-        height: 100%;
-        /*アニメーション*/
-        transition: transform .5s cubic-bezier(0.8, 0, 0.2, 1) 0s;
-        transform: scale(0, 1);
-        transform-origin: right top;
-    }
-
-    /*hoverした際の形状*/
-    .bgleft:hover:before {
-        transform-origin: left top;
-        transform: scale(1, 1);
-    }
 
 
-    footer {
-        background-color: #ff9894;
-        text-align: center;
-    }
-
-    footer p {
-        color: #fff;
-        font-size: 8px;
-        letter-spacing: 0.3rem;
-        padding: 20px 0;
-    }
+	    .sample1:checked .mask {
+	        opacity: 1;
+	        /* マスクを表示する */
+	    }
 
 
-    #topbutton {
-        /* ▼ボタンの表示位置を画面の右下に固定 */
-        position: fixed;
-        /* ←表示場所を固定 */
-        bottom: 68px;
-        /* ←下端からの距離 */
-        left: 300px;
-        /* ←右端からの距離 */
-        width: 40px;
-        height: 40px;
+	    .minites {
 
-        /* ▼最初は非表示にしておく */
-        display: none;
+	        font-size: 16px;
+	        width: 60px;
+	        height: 60px;
+	        line-height: 60px;
 
-        /* ▼配色・配置・文字の装飾など */
+	    }
 
-        /* ←背景色 */
-        background-size: cover;
-        text-align: center;
-        /* ←文字の位置 */
-        font-size: 16px;
-        /* ←文字サイズ */
-        margin: 0px;
-        /* ←外側の余白 */
-        /* ←内側の余白 */
-        z-index: 800;
-    }
 
-    #topbutton a {
-        /* ▼リンクの装飾 */
-        color: #65A650;
-        /* ←文字色 */
-        text-decoration: none;
-        /* ←下線なし */
-        display: block;
-        margin-top: 10px;
-        font-size: 8px;
-    }
+	    .sime_title {
+	        line-height: 3rem;
+	        font-size: 24px;
+	        padding: 60px 0;
+	        font-weight: 700;
+	        letter-spacing: 0.3rem;
+	    }
 
-    #topbutton a:hover {
-        /* ▼マウスが載ったときの装飾 */
-        /* ←文字色 */
-        text-decoration: underline;
-        /* ←下線あり */
-    }
+	    .sime_bun {
+	        font-size: 14px;
+	        letter-spacing: 0.3em;
+	        padding: 35px 0;
+	    }
 
-}
+	    #motto1 {
+	        text-align: center;
+	        background-color: #F6F8E8;
+	    }
+
+	    .motto_mozi1 {
+	        font-size: 18px;
+	        line-height: 40px;
+	        letter-spacing: 0.2em;
+	        font-weight: 400;
+	        display: inline;
+	    }
+
+	    #motto1 p {
+	        font-size: 18px;
+	        padding: 50px 0;
+	        display: block;
+	    }
+
+	    #motto1 a {
+	        text-decoration: none;
+	        color: #fff;
+	        font-size: 12px;
+	        background-color: #65A650;
+	        letter-spacing: 0.1rem;
+	        border-radius: 15px;
+	        display: block;
+	        width: 50%;
+	        margin: 20px auto;
+
+	    }
+
+
+
+	    .btn {
+	        /*アニメーションの起点とするためrelativeを指定*/
+	        position: relative;
+	        overflow: hidden;
+	        /*ボタンの形状*/
+	        text-decoration: none;
+	        display: inline-block;
+	        padding: 10px 15px;
+	        text-align: center;
+	        outline: none;
+	        /*アニメーションの指定*/
+	        transition: ease .2s;
+	    }
+
+	    /*ボタン内spanの形状*/
+	    .btn span {
+	        position: relative;
+	        z-index: 3;
+	        /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	        color: #fff;
+	    }
+
+	    .btn:hover span {
+	        color: #65A650;
+	    }
+
+	    /*== 背景が流れる（左から右） */
+	    .bgleft:before {
+	        content: '';
+	        /*絶対配置で位置を指定*/
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        z-index: 2;
+	        /*色や形状*/
+	        background: #fff;
+	        /*背景色*/
+	        width: 100%;
+	        height: 100%;
+	        /*アニメーション*/
+	        transition: transform .5s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+	        transform: scale(0, 1);
+	        transform-origin: right top;
+	    }
+
+	    /*hoverした際の形状*/
+	    .bgleft:hover:before {
+	        transform-origin: left top;
+	        transform: scale(1, 1);
+	    }
+
+
+	    footer {
+	        background-color: #ff9894;
+	        text-align: center;
+	    }
+
+	    footer p {
+	        color: #fff;
+	        font-size: 8px;
+	        letter-spacing: 0.3rem;
+	        padding: 20px 0;
+	    }
+
+
+	    #topbutton {
+	        /* ▼ボタンの表示位置を画面の右下に固定 */
+	        position: fixed;
+	        /* ←表示場所を固定 */
+	        bottom: 68px;
+	        /* ←下端からの距離 */
+	        left: 300px;
+	        /* ←右端からの距離 */
+	        width: 40px;
+	        height: 40px;
+
+	        /* ▼最初は非表示にしておく */
+	        display: none;
+
+	        /* ▼配色・配置・文字の装飾など */
+
+	        /* ←背景色 */
+	        background-size: cover;
+	        text-align: center;
+	        /* ←文字の位置 */
+	        font-size: 16px;
+	        /* ←文字サイズ */
+	        margin: 0px;
+	        /* ←外側の余白 */
+	        /* ←内側の余白 */
+	        z-index: 800;
+	    }
+
+	    #topbutton a {
+	        /* ▼リンクの装飾 */
+	        color: #65A650;
+	        /* ←文字色 */
+	        text-decoration: none;
+	        /* ←下線なし */
+	        display: block;
+	        margin-top: 10px;
+	        font-size: 8px;
+	    }
+
+	    #topbutton a:hover {
+	        /* ▼マウスが載ったときの装飾 */
+	        /* ←文字色 */
+	        text-decoration: underline;
+	        /* ←下線あり */
+	    }
+
+	}
