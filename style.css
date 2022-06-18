@@ -1581,7 +1581,7 @@
 
 	    .sample1 .mask {
 	        width: 225%;
-	        height: 73.6%;
+	        height: 75.6%;
 	        border-radius: 22px;
 	        position: absolute;
 	        /* 絶対位置指定 */
@@ -1598,7 +1598,7 @@
 
 	    .sample1 .mask1 {
 
-	        height: 73.6%;
+	        height: 100.6%;
 	        text-align: initial;
 
 	    }
