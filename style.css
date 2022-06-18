@@ -855,13 +855,14 @@
 
 
 	#ganbaru a {
-	    position: relative;
+	    position: content;
 	    display: inline-block;
 	    transition: .3s;
 	    display: inline-block;
 	    transition: .3s;
 	    -webkit-transform: scale(1);
 	    transform: scale(1);
+
 	}
 
 	#ganbaru a:hover {
@@ -1565,7 +1566,7 @@
 	    .namae_under {
 	        margin-top: 40px;
 	        width: 206px;
-	        margin-bottom: 100px;
+	        margin-bottom: 0px;
 	    }
 
 
@@ -1780,5 +1781,9 @@
 	        text-decoration: underline;
 	        /* ←下線あり */
 	    }
+
+        .minites a{
+            display: contents;    
+        }
 
 	}
