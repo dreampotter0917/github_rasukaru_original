@@ -1580,12 +1580,13 @@
         top: -60px;
         left: 90px;
         text-align: initial;
+        width: 172px;
 
 	}
 
 	.tanomu_ex {
-	    width: 190px;
-	    display: inline-block;
+	    width: 390px;
+	    display: block;
 	    padding: 15px;
 	}
 
