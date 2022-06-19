@@ -1105,6 +1105,10 @@
 	    #motto1 {
 	        display: none;
 	    }
+        
+        #tanomu_sp{
+            display: none;
+        }
 
 	}
 
@@ -1146,6 +1150,11 @@
 	    #tophe {
 	        display: none;
 	    }
+
+        #tanomu{
+            display: none;
+            background-color: #F6F8E8;
+        }
 
 	    .sp_top_h1 {
 	        text-align: center;
@@ -1501,6 +1510,89 @@
         top: -77px;
         left: -78px;
     } */
+
+
+
+
+    /* 頼むならこれ */
+
+
+	#tanomu_sp {
+	    background-color: #F6F8E8;
+	}
+
+
+    .cirles{
+        position: relative;
+    }
+
+
+	.circle_1 {
+	 position: absolute;
+     left: 70px;
+	}
+
+	.circle_2 {
+        left: 163px;
+	    top: -0px;
+	    position: relative;
+	}
+
+	.tanomu_pasuta {
+	    color: #fff;
+	    font-size: 20px;
+	    font-weight: 700;
+	    position: relative;
+
+	    top: -83px;
+	    left: 95px
+	}
+
+
+	.tanomu_oiru {
+	    color: #fff;
+	    font-size: 20px;
+	    font-weight: 700;
+	    position: relative;
+	    top: -110px;
+	    left: 200px;
+	}
+
+    .tanomu_dasimaki,.tanomu_famiresu{
+        font-size: 16px;
+    }
+
+    .tanomu_famiresu{
+        left:75px
+    }
+	.tanomu_kakeru {
+
+	    color: #fff;
+	    font-size: 22px;
+	    font-weight: 700;
+	    position: relative;
+	    top: -142px;
+	    left: 170px;
+	}
+
+	.tanomu_syoukai {
+        top: -60px;
+        left: 90px;
+        text-align: initial;
+
+	}
+
+	.tanomu_ex {
+	    width: 190px;
+	    display: inline-block;
+	    padding: 15px;
+	}
+
+	.content4 {
+	    text-align: center;
+	    margin-top: 100px;
+	}
+
 
 	    /* 頑張れるに日には */
 
