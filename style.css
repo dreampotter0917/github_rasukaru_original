@@ -1519,6 +1519,7 @@
 
 	#tanomu_sp {
 	    background-color: #F6F8E8;
+        transform: translate3d(0,0,0);
 	}
 
 
