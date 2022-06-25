@@ -226,6 +226,8 @@
 
 	/* 現在の食生活 */
 
+
+	
 	.time {
 	    color: #403E38;
 	    font-size: 24px;
@@ -245,6 +247,12 @@
 	    margin-bottom: -60px;
 	}
 
+
+	.waku{
+		position: relative;
+		top: -80px;
+		left:-38px
+	}
 
 
 
@@ -655,6 +663,7 @@
 	    position: relative;
 	    top: -159px;
 	    left: -22px;
+		height: 40px;
 	}
 
 	.tanomu_kakeru {
@@ -665,6 +674,10 @@
 	    position: relative;
 	    top: -259px;
 	    left: -26px;
+	}
+
+	.tanomu_dasimaki{
+		font-size: 18px;
 	}
 
 	.tanomu_syoukai {
@@ -1279,6 +1292,12 @@
 	        transform: rotateY(0);
 	    }
 
+		.waku{
+			position: relative;
+	
+			left:0px
+		}
+
 	    /* 理想の食生活 */
 	    #risou {
 	        background-color: #F6F8E8;
@@ -1367,16 +1386,30 @@
 	        padding-bottom: 200px;
 	    }
 
+        .sp_content{
+            border-bottom: solid #65A650 2px;    
+            width: 60%;
+            padding: 30px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+
 	    .button {
 	        color: #fff;
-	        background-color: #ff9894;
+	        background-color:#65A650;
 	        display: block;
-	        width: 100px;
+	        width: 200px;
 	        margin: 0 auto;
 	        padding: 10px;
 	        text-align: center;
-	        border-radius: 5px;
+	        border-radius: 10px;
 	    }
+
+
+        .button_pink{
+            background-color: #ff9894;
+        }
 
 	    .a_center {
 	        text-align: center;
@@ -1384,6 +1417,9 @@
 
 	    .modal_photo {
 	        width: 180px;
+            margin-bottom: -30px;
+            display: flex;
+            margin: 0 auto;
 
 	    }
 
@@ -1559,9 +1595,21 @@
 	    left: 200px;
 	}
 
-    .tanomu_dasimaki,.tanomu_famiresu{
+    .tanomu_dasimaki{
         font-size: 16px;
+		position: relative;
+		top:-126px;
     }
+
+	.tanomu_famiresu{
+		font-size: 16px;
+	}
+
+	.tanomu_yaki{
+		position: relative;
+		top: -122px;
+		left: 210px;
+	}
 
     .tanomu_famiresu{
         left:75px
@@ -1572,7 +1620,7 @@
 	    font-size: 22px;
 	    font-weight: 700;
 	    position: relative;
-	    top: -142px;
+	    top: -151px;
 	    left: 170px;
 	}
 
@@ -1660,7 +1708,6 @@
 	    .namae_under {
 	        margin-top: 40px;
 	        width: 206px;
-	        margin-bottom: 100px;
 	    }
 
 
