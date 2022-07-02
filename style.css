@@ -661,7 +661,7 @@
 	    font-size: 24px;
 	    font-weight: 700;
 	    position: relative;
-	    top: -159px;
+	    top: -153px;
 	    left: -22px;
 		height: 40px;
 	}
@@ -677,9 +677,16 @@
 	}
 
 	.tanomu_dasimaki{
+		position: relative;
 		font-size: 18px;
+		top: -168px;
 	}
 
+	.tanomu_yaki{
+		position: relative;
+		top:-169px;
+
+	}
 	.tanomu_syoukai {
 	    font-size: 12px;
 	    top: -90px;
